@@ -1,0 +1,296 @@
+/* ============================================================
+   bci.css  —  B Plate Resonator / Non-Invasive BCI
+   Extends the main infinity design system (style.css)
+   ============================================================ */
+
+/* ---------- Section colours (override for BCI palette) ---------- */
+:root {
+  --bci-teal:    #00d4b4;
+  --bci-lime:    #84cc16;
+  --bci-amber:   #f59e0b;
+  --bci-pink:    #ec4899;
+  --bci-purple:  #7c3aed;
+  --bci-indigo:  #4f46e5;
+  --bci-cyan:    #06b6d4;
+}
+
+/* ============================================================
+   HERO — BCI
+   ============================================================ */
+.bci-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(0,212,180,.1);
+  border: 1px solid rgba(0,212,180,.3);
+  border-radius: 99px;
+  padding: .35rem 1rem;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--bci-teal);
+  margin-bottom: 1.5rem;
+}
+.bci-hero-badge .pulse {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--bci-teal);
+  animation: bci-pulse 1.8s infinite;
+}
+@keyframes bci-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(0,212,180,.6); }
+  50%      { box-shadow: 0 0 0 6px rgba(0,212,180,0); }
+}
+
+/* ============================================================
+   CANVAS PANELS
+   ============================================================ */
+.canvas-panel {
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.canvas-panel canvas {
+  display: block;
+  width: 100%;
+}
+.canvas-label {
+  position: absolute;
+  bottom: .75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.canvas-controls {
+  display: flex;
+  gap: .5rem;
+  padding: .75rem 1rem;
+  border-top: 1px solid rgba(255,255,255,.05);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ctrl-btn {
+  background: rgba(124,58,237,.18);
+  border: 1px solid rgba(124,58,237,.3);
+  border-radius: 99px;
+  padding: .3rem .9rem;
+  font-size: .78rem;
+  font-weight: 600;
+  color: #a78bfa;
+  cursor: pointer;
+  transition: all .2s;
+}
+.ctrl-btn:hover { background: rgba(124,58,237,.35); color: #fff; }
+.ctrl-btn.active { background: rgba(124,58,237,.5); color: #fff; border-color: #7c3aed; }
+.ctrl-label {
+  font-size: .75rem;
+  color: rgba(255,255,255,.35);
+  margin-left: auto;
+}
+.freq-readout {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .85rem;
+  color: var(--bci-teal);
+  background: rgba(0,212,180,.08);
+  border: 1px solid rgba(0,212,180,.2);
+  border-radius: 4px;
+  padding: .2rem .6rem;
+}
+
+/* ============================================================
+   THREE-STEP AI LOOP
+   ============================================================ */
+.ai-loop {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 2.5rem;
+}
+.ai-loop::before {
+  content: '';
+  position: absolute;
+  left: 1.1rem;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--bci-teal) 0%, var(--bci-purple) 50%, var(--bci-pink) 100%);
+  border-radius: 99px;
+}
+.ai-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  position: relative;
+}
+.ai-step-num {
+  position: absolute;
+  left: -2.5rem;
+  top: 1.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: .85rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.ai-step:nth-child(1) .ai-step-num { background: rgba(0,212,180,.2); border: 2px solid var(--bci-teal);  color: var(--bci-teal); }
+.ai-step:nth-child(2) .ai-step-num { background: rgba(124,58,237,.2); border: 2px solid var(--bci-purple); color: #a78bfa; }
+.ai-step:nth-child(3) .ai-step-num { background: rgba(236,72,153,.2); border: 2px solid var(--bci-pink);  color: var(--bci-pink); }
+.ai-step-body { flex: 1; }
+.ai-step-body h4 { font-size: 1rem; margin-bottom: .35rem; }
+.ai-step-body p  { font-size: .88rem; }
+
+/* ============================================================
+   REFERENCE CHIPS
+   ============================================================ */
+.ref-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 4px;
+  padding: .2rem .55rem;
+  font-size: .72rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  transition: all .2s;
+  vertical-align: middle;
+}
+.ref-chip:hover {
+  background: rgba(0,212,180,.1);
+  border-color: var(--bci-teal);
+  color: var(--bci-teal);
+}
+
+/* ============================================================
+   SPEC TABLE
+   ============================================================ */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .85rem;
+  margin-top: 1rem;
+}
+.spec-table th, .spec-table td {
+  padding: .6rem .9rem;
+  border: 1px solid rgba(255,255,255,.07);
+  text-align: left;
+}
+.spec-table th {
+  background: rgba(124,58,237,.15);
+  color: #a78bfa;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.spec-table td { color: rgba(255,255,255,.75); }
+.spec-table tr:hover td { background: rgba(255,255,255,.02); }
+.spec-table td:first-child { color: var(--bci-teal); font-family: 'JetBrains Mono', monospace; font-size: .8rem; }
+
+/* ============================================================
+   SCIENCE NOTE BOX
+   ============================================================ */
+.science-note {
+  background: rgba(0,212,180,.05);
+  border: 1px solid rgba(0,212,180,.2);
+  border-radius: .75rem;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: .88rem;
+  color: rgba(255,255,255,.75);
+  line-height: 1.6;
+}
+.science-note-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.science-note strong { color: var(--bci-teal); }
+.science-note a { color: var(--bci-teal); text-decoration: underline; }
+
+/* ============================================================
+   REFERENCES SECTION
+   ============================================================ */
+.references-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+.references-list li {
+  display: flex;
+  gap: .75rem;
+  align-items: baseline;
+  font-size: .82rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.5;
+}
+.ref-num {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: rgba(124,58,237,.18);
+  border: 1px solid rgba(124,58,237,.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .7rem;
+  font-weight: 700;
+  color: #a78bfa;
+  font-family: 'JetBrains Mono', monospace;
+  align-self: flex-start;
+  margin-top: .1rem;
+}
+.references-list a { color: var(--bci-teal); text-decoration: underline; word-break: break-word; }
+.references-list a:hover { color: #fff; }
+
+/* ============================================================
+   CHLADNI FREQUENCY LEGEND
+   ============================================================ */
+.chladni-modes {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.mode-btn {
+  padding: .35rem .85rem;
+  border-radius: 99px;
+  border: 1.5px solid;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  background: none;
+}
+.mode-btn[data-mode="1"] { border-color: var(--bci-teal);   color: var(--bci-teal); }
+.mode-btn[data-mode="2"] { border-color: var(--bci-purple); color: #a78bfa; }
+.mode-btn[data-mode="3"] { border-color: var(--bci-amber);  color: var(--bci-amber); }
+.mode-btn[data-mode="4"] { border-color: var(--bci-pink);   color: var(--bci-pink); }
+.mode-btn.active,
+.mode-btn:hover { opacity: 1; color: #fff; }
+.mode-btn[data-mode="1"].active, .mode-btn[data-mode="1"]:hover { background: rgba(0,212,180,.25); }
+.mode-btn[data-mode="2"].active, .mode-btn[data-mode="2"]:hover { background: rgba(124,58,237,.25); }
+.mode-btn[data-mode="3"].active, .mode-btn[data-mode="3"]:hover { background: rgba(245,158,11,.25); }
+.mode-btn[data-mode="4"].active, .mode-btn[data-mode="4"]:hover { background: rgba(236,72,153,.25); }
