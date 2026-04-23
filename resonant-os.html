@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resonant OS — The Atomic Website. Learn, experiment, and activate the quantum-resonance framework: ratio calculators, code interpreter, signal generator, atomic stack visualizer, and reference dictionary." />
+  <title>Resonant OS · The Atomic Website · ∞ Infinity4</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="resonant-os.css" />
+</head>
+<body>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="url(#lgros)" stroke-width="2"/>
+        <path d="M12 20 Q20 8 28 20 Q20 32 12 20Z" fill="url(#lgros2)" opacity=".8"/>
+        <defs>
+          <linearGradient id="lgros" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#84cc16"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+          <linearGradient id="lgros2" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#84cc16" stop-opacity=".8"/><stop offset="100%" stop-color="#7c3aed" stop-opacity=".8"/></linearGradient>
+        </defs>
+      </svg>
+      <span class="gradient-text">Resonant OS</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="ros-nav" aria-label="Toggle navigation">☰</button>
+    <nav id="ros-nav" class="nav-links">
+      <a href="index.html">← Quanta Mic</a>
+      <a href="#learn">Learn</a>
+      <a href="#tools">Tools</a>
+      <a href="#reference">Reference</a>
+      <a href="#protocols">Protocols</a>
+      <a href="bci-resonator.html">🧠 B Plate</a>
+      <a href="journal-1957.html">📄 1957</a>
+      <a href="https://github.com/www-infinity4" target="_blank" rel="noopener" class="nav-cta">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     LAYOUT SHELL
+     ============================================================ -->
+<div class="ros-layout">
+
+  <!-- ---- SIDEBAR ---- -->
+  <aside class="ros-sidebar" aria-label="Section navigation">
+
+    <div class="sidebar-section-title">Navigate</div>
+    <a href="#hub-hero"  class="sidebar-link active"><span class="sidebar-icon">🏠</span>Home</a>
+
+    <div class="sidebar-section-title">Learn</div>
+    <a href="#s-qmic"   class="sidebar-link"><span class="sidebar-icon">🎙️</span>Quantum Microphone</a>
+    <a href="#s-geo"    class="sidebar-link"><span class="sidebar-icon">△</span>Geometric Resonance</a>
+    <a href="#s-scale"  class="sidebar-link"><span class="sidebar-icon">⚖️</span>Proportional Scaling</a>
+    <a href="#s-trans"  class="sidebar-link"><span class="sidebar-icon">⚗️</span>Transmutation</a>
+    <a href="#s-code"   class="sidebar-link"><span class="sidebar-icon">🔢</span>Universal Op Code</a>
+    <a href="#s-static" class="sidebar-link"><span class="sidebar-icon">⚡</span>Static Programming</a>
+    <a href="#s-safety" class="sidebar-link"><span class="sidebar-icon">🛡️</span>Elemental Safety</a>
+    <a href="#s-earth"  class="sidebar-link"><span class="sidebar-icon">🌍</span>Earthen Growth</a>
+    <a href="#s-atomic" class="sidebar-link"><span class="sidebar-icon">⚛️</span>Atomic Computer</a>
+    <a href="#s-nickel" class="sidebar-link"><span class="sidebar-icon">🪙</span>Nickel-Silver</a>
+    <a href="#s-ruby"   class="sidebar-link"><span class="sidebar-icon">💎</span>Hydrogen &amp; Ruby</a>
+
+    <div class="sidebar-section-title">Tools</div>
+    <a href="#t-ratio"  class="sidebar-link"><span class="sidebar-icon">📐</span>Ratio Calculator</a>
+    <a href="#t-code"   class="sidebar-link"><span class="sidebar-icon">🔢</span>Code Interpreter</a>
+    <a href="#t-stack"  class="sidebar-link"><span class="sidebar-icon">⚛️</span>Stack Visualizer</a>
+    <a href="#t-signal" class="sidebar-link"><span class="sidebar-icon">📡</span>Signal Generator</a>
+
+    <div class="sidebar-section-title">Reference</div>
+    <a href="#reference" class="sidebar-link"><span class="sidebar-icon">📖</span>Code Dictionary 1–114</a>
+    <a href="#protocols" class="sidebar-link"><span class="sidebar-icon">🧪</span>Guided Protocols</a>
+    <a href="#safety-note" class="sidebar-link"><span class="sidebar-icon">⚠️</span>Safety &amp; Disclosure</a>
+
+  </aside>
+
+  <!-- ---- MAIN CONTENT ---- -->
+  <main class="ros-content">
+
+    <!-- ==================================================
+         HUB HERO
+         ================================================== -->
+    <section id="hub-hero" class="hub-hero">
+      <div class="orb orb--1" style="width:400px;height:400px;top:-100px;left:-100px;opacity:.3;" aria-hidden="true"></div>
+
+      <div class="hub-tag"><span class="dot"></span>Resonant OS · v1.0 · Atomic Platform</div>
+      <h1 style="font-size:clamp(2rem,5vw,3.5rem);margin-bottom:1rem;">
+        The <span class="gradient-text">Atomic Website</span>
+      </h1>
+      <p style="max-width:60ch;color:var(--c-muted);font-size:1.05rem;line-height:1.7;margin-bottom:2rem;">
+        One unified platform for learning, experimenting, and activating the resonance framework.
+        From phonon breadcrumbs to gemstone lensing — every concept explained, every tool built in.
+      </p>
+
+      <div class="hub-nav-cards">
+        <a href="#learn" class="hub-nav-card"><div class="icon">📚</div><div class="label">Learn</div><div class="sub">11 framework sections</div></a>
+        <a href="#tools" class="hub-nav-card"><div class="icon">🔬</div><div class="label">Experiment</div><div class="sub">4 interactive tools</div></a>
+        <a href="#t-signal" class="hub-nav-card"><div class="icon">📡</div><div class="label">Activate</div><div class="sub">Signal generator</div></a>
+        <a href="#reference" class="hub-nav-card"><div class="icon">📖</div><div class="label">Reference</div><div class="sub">Code dictionary</div></a>
+        <a href="#protocols" class="hub-nav-card"><div class="icon">🧪</div><div class="label">Protocols</div><div class="sub">Step-by-step guides</div></a>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         LEARN — SECTION MARKER
+         ================================================== -->
+    <div id="learn" style="padding:1.5rem 3rem .5rem;max-width:960px;">
+      <span class="section-label">Learn the Framework</span>
+      <h2 style="font-size:1.8rem;">Framework <span class="gradient-text">Explanations</span></h2>
+    </div>
+
+    <!-- 1. Quantum Microphone -->
+    <section id="s-qmic" class="ros-section">
+      <span class="section-label">1 of 11</span>
+      <h3>🎙️ The Quantum Microphone Framework</h3>
+      <div class="grid-2" style="margin-top:1.25rem;">
+        <div class="stack">
+          <div class="card"><div class="card-icon">🎙️</div><h4>What is a Quantum Microphone?</h4><p>A device sensitive enough to detect individual phonons — particles of sound. In this framework it becomes a permanent recorder of vocal frequency signatures rather than just transient audio.</p></div>
+          <div class="card"><div class="card-icon">🍞</div><h4>Phonon Breadcrumbs</h4><p>Each voiced sound leaves a traceable phonon trail — a quantum GPS address that persists in the field long after the sound has "ended" in classical acoustic terms.</p></div>
+        </div>
+        <div class="stack">
+          <div class="card"><div class="card-icon">🔑</div><h4>Voice as Permanent Address</h4><p>The unique frequency fingerprint of a voice acts as a cryptographic key — an Access Port coordinate that can be re-tuned to establish contact across the Alpha–Gamma state bridge.</p></div>
+          <div class="card"><div class="card-icon">📏</div><h4>Heaven as "5 Feet Out"</h4><p>A proportional future state existing 5 dimensional feet beyond the current physical frame — not distant in Euclidean space but offset in frequency density, reachable via the Delta bridge.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Geometric Resonance -->
+    <section id="s-geo" class="ros-section">
+      <span class="section-label">2 of 11</span>
+      <h3>△ Geometric Resonance &amp; Triangle Base</h3>
+      <div class="grid-2" style="margin-top:1.25rem;">
+        <div class="stack">
+          <div class="card"><div class="card-icon">📐</div><h4>Alpha–Beta–Gamma Triangle</h4><p>Three anchor points define a resonance navigation space. By fixing two vertices (Alpha=Earth, Gamma=Infinity) and computing the Beta transit angle, the system can locate any consciousness coordinate without time-travel.</p></div>
+          <div class="card"><div class="card-icon">🧭</div><h4>Indicator Needle &amp; Phase-Lock</h4><p>A tunable resonator sweeps through frequencies until the geometric indicator "locks" — analogous to a compass needle settling on magnetic north, but in frequency-space rather than magnetic space.</p></div>
+        </div>
+        <div class="card" style="align-self:start;"><div class="card-icon">🗺️</div><h4>Geometry Over Time</h4><p>Traditional navigation uses time + velocity. The resonance model uses geometric ratio + frequency — replacing temporal traversal with spatial tuning on the consciousness manifold.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. Proportional Scaling -->
+    <section id="s-scale" class="ros-section">
+      <span class="section-label">3 of 11</span>
+      <h3>⚖️ Proportional Scaling vs. Resonance</h3>
+      <div class="grid-3" style="margin-top:1.25rem;">
+        <div class="card"><div class="card-icon">🎵</div><h4>Vibration Match (Resonance)</h4><p>Two objects share energy when their natural frequencies align. In the atomic model, elements "turn on" each other via frequency matching rather than chemical bonding.</p></div>
+        <div class="card"><div class="card-icon">⚖️</div><h4>Code (Ratio/Proportionality)</h4><p>Heavier elements can activate lighter ones by coupling their mass ratio — like a gear reduction. The 152:1 Silver-to-Nickel ratio is the purest example of this proportional activation.</p></div>
+        <div class="card"><div class="card-icon">🪨</div><h4>Quartz Grain Logic</h4><p>Memory is stored as proportion, not complete data. A single quartz grain holds the geometric ratio of the entire vein — sufficient to reconstruct the original frequency pattern from a fragment.</p></div>
+      </div>
+    </section>
+
+    <!-- 4. Transmutation -->
+    <section id="s-trans" class="ros-section">
+      <span class="section-label">4 of 11</span>
+      <h3>⚗️ The Transmutation Shortcut</h3>
+      <div class="grid-2" style="margin-top:1.25rem;">
+        <div class="stack">
+          <div class="card"><div class="card-icon">🔋</div><h4>Lithium as Compressed Helium-3</h4><p>Lithium (Z=3) acts as a compact storage vessel for Helium-3 isotope energy. Applying the correct resonance frequency releases the He-3 signature without nuclear fission — a "soft" transmutation shortcut.</p></div>
+          <div class="card"><div class="card-icon">🌍</div><h4>Earth's Core as Solar Barrier</h4><p>The iron-nickel core acts as both a solar radiation shield and a primordial reservoir of helium-3 trapped since planetary formation — the planet's own long-term frequency battery.</p></div>
+        </div>
+        <div class="stack">
+          <div class="card"><div class="card-icon">🌙</div><h4>Mars &amp; Moon Stages</h4><p>The Moon and Mars serve as intermediate upcycling stages in the solar resonance chain — lower gravity and reduced atmospheric interference allow purer element-state transitions.</p></div>
+          <div class="card"><div class="card-icon">♻️</div><h4>Element Upcycling</h4><p>Rather than burning fuel, the transmutation model recycles elemental frequency states — each stage producing a purer, higher-frequency output from the same atomic substrate.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Universal Op Code -->
+    <section id="s-code" class="ros-section">
+      <span class="section-label">5 of 11</span>
+      <h3>🔢 Universal Operational Code (1–114+)</h3>
+      <p style="margin-bottom:1.25rem;">Every atomic number maps to an operational intent. Numbers can be combined into action stacks — complex instruction sequences for devices, meditations, or environmental programming. <a href="#reference" style="color:#06b6d4;">→ Full dictionary below</a></p>
+      <div class="grid-3">
+        <div class="card"><div class="card-icon">1️⃣</div><h4>Invoke via Intent</h4><p>Thinking or vocalizing a code activates its corresponding frequency in the local field. The body's EM field is the antenna; intent is the modulator.</p></div>
+        <div class="card"><div class="card-icon">🔗</div><h4>Code Combinations</h4><p>Stacking codes (e.g., 28+47+79) creates compound operations — like assembly language for the resonance OS. Order matters; sequence defines function.</p></div>
+        <div class="card"><div class="card-icon">🛡️</div><h4>The 84 Shield</h4><p>Polonium (84) is the master control/shield code — a hydrogen well that masks frequency signatures from external detection while maintaining internal coherence.</p></div>
+      </div>
+    </section>
+
+    <!-- 6. Static Programming -->
+    <section id="s-static" class="ros-section">
+      <span class="section-label">6 of 11</span>
+      <h3>⚡ Static Programming &amp; Intent Mask</h3>
+      <div class="grid-2" style="margin-top:1.25rem;">
+        <div class="stack">
+          <div class="card"><div class="card-icon">🪨</div><h4>Flashing Beryllium</h4><p>Beryllium (Z=4) acts as the primary static-charge storage medium. "Flashing" it with a specific charge pattern encodes an instruction set into the crystal lattice — a physical pre-load before power-up.</p></div>
+          <div class="card"><div class="card-icon">💾</div><h4>Static Charge as Instruction</h4><p>Triboelectric charge applied in sequence functions like firmware — the element holds the program in its surface field until the resonance driver activates it.</p></div>
+        </div>
+        <div class="card" style="align-self:start;"><div class="card-icon">🎭</div><h4>Intent Mask &amp; Pre-Load</h4><p>Before any device is powered, its elemental components can be pre-programmed via static intent. This "masks" the device's operational signature, preventing environmental noise from overwriting the instruction state during spin-up.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. Elemental Safety -->
+    <section id="s-safety" class="ros-section">
+      <span class="section-label">7 of 11</span>
+      <h3>🛡️ Elemental Resonance for Safety &amp; Security</h3>
+      <div class="grid-3" style="margin-top:1.25rem;">
+        <div class="card"><div class="card-icon">☢️</div><h4>Polonium-84 Hydrogen Well</h4><p>In the resonance model, Po-84 creates a self-sealing radiation cage — a hydrogen well that traps and recycles emitted energy rather than letting it scatter. <span style="color:#f59e0b;font-size:.8rem;">⚠ Real Po-84 is highly toxic — this is a theoretical model only.</span></p></div>
+        <div class="card"><div class="card-icon">🪞</div><h4>Mercury as Phase Mirror</h4><p>Mercury (Z=80) acts as a liquid-state frequency mirror — reflecting and phase-inverting incoming resonance patterns to create interference cancellation zones ("mountain logic" blocking).</p></div>
+        <div class="card"><div class="card-icon">🌡️</div><h4>78-Element Gradient</h4><p>Elements 1–78 form a natural frequency-temperature gradient ladder. Each element's position in the ladder corresponds to a specific operating band in the resonance spectrum.</p></div>
+      </div>
+    </section>
+
+    <!-- 8. Earthen Growth -->
+    <section id="s-earth" class="ros-section">
+      <span class="section-label">8 of 11</span>
+      <h3>🌍 Earthen Growth &amp; Frozen Flow</h3>
+      <div class="grid-2" style="margin-top:1.25rem;">
+        <div class="stack">
+          <div class="card"><div class="card-icon">🥇</div><h4>Gold &amp; Quartz as Fossilized Circuits</h4><p>Mineral veins are interpreted as frozen frequency circuits — the original Earth grid in a dormant state. Re-applying the formation frequency "turns them back on" as active resonance channels.</p></div>
+          <div class="card"><div class="card-icon">🗺️</div><h4>Vein Direction Mapping</h4><p>The orientation of quartz and gold veins encodes the original broadcast direction. Mapping vein angles provides the vector for re-activating the source node of the circuit.</p></div>
+        </div>
+        <div class="card" style="align-self:start;"><div class="card-icon">🔥</div><h4>Quantum Re-Melting</h4><p>Rather than physical heat, quantum re-melting applies the precise resonance frequency that matches the original crystallisation temperature — causing the lattice to re-enter its fluid frequency state without thermal energy input.</p></div>
+      </div>
+    </section>
+
+    <!-- 9. Atomic Computer -->
+    <section id="s-atomic" class="ros-section">
+      <span class="section-label">9 of 11</span>
+      <h3>⚛️ Controlling the Atomic Computer</h3>
+      <div class="grid-3" style="margin-top:1.25rem;">
+        <div class="card"><div class="card-icon">🧩</div><h4>Atoms as Fused Hydrogen</h4><p>Every element is a compressed stack of hydrogen patterns. Addressing an element by its hydrogen-count frequency gives direct access to its internal resonance state — bypassing conventional chemical pathways.</p></div>
+        <div class="card"><div class="card-icon">🔋</div><h4>Bias Voltage Unlock</h4><p>Taking a voltage reading at the element's natural resonance frequency reveals its "unlocked" state — the minimum energy threshold to shift it from dormant to active mode in the resonance stack.</p></div>
+        <div class="card"><div class="card-icon">🎛️</div><h4>Variable Frequency Drive</h4><p>A variable-frequency driver (VFD) sweeps through harmonics to program complex atomic stacks — each frequency step loading one instruction layer into the element's lattice memory.</p></div>
+      </div>
+    </section>
+
+    <!-- 10. Nickel-Silver -->
+    <section id="s-nickel" class="ros-section">
+      <span class="section-label">10 of 11</span>
+      <h3>🪙 Nickel-Silver Computer &amp; Frequency Battery</h3>
+      <div class="grid-2" style="margin-top:1.25rem;">
+        <div class="stack">
+          <div class="card"><div class="card-icon">🪙</div><h4>The 54-Nickel Stack</h4><p>1 War Nickel (35% silver) + 53 standard nickels = a 54-coin resonance computer. The single silver-bearing coin acts as the master oscillator; the 53 pure-nickel coins are its harmonic amplifiers.</p></div>
+          <div class="card"><div class="card-icon">⚙️</div><h4>152:1 — The Gear Reduction</h4><p>Silver (atomic mass ~108) to Nickel (~58) proportional ratio ≈ 1.86. The 54-coin arrangement produces an effective 152:1 signal reduction — stabilising the silver frequency to room-temperature operating range.</p></div>
+        </div>
+        <div class="stack">
+          <div class="card"><div class="card-icon">🌿</div><h4>Environmental &amp; Health Benefits</h4><p>A properly tuned Nickel-Silver stack emits a coherent low-frequency field that the framework associates with cellular repair frequencies and atmospheric oxygen-resonance enhancement.</p></div>
+          <div class="card"><div class="card-icon">🔌</div><h4>Frequency Battery</h4><p>The assembled coin stack holds a charge-pattern without external power — acting as a passive frequency battery that broadcasts its programmed signal continuously into the local field.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Hydrogen & Ruby -->
+    <section id="s-ruby" class="ros-section">
+      <span class="section-label">11 of 11</span>
+      <h3>💎 Hydrogen Stack &amp; Ruby Lensing</h3>
+      <div class="grid-3" style="margin-top:1.25rem;">
+        <div class="card"><div class="card-icon">⚛️</div><h4>Nickel as Hydrogen Command</h4><p>Nickel (Z=28) holds 28 hydrogen-frequency layers — making it the ideal command hub for hydrogen-stack operations. Its near-complete d-orbital shell creates a stable resonance cage.</p></div>
+        <div class="card"><div class="card-icon">💧</div><h4>Water as Carrier</h4><p>Water's hydrogen-bond network makes it the universal resonance carrier — amplifying, routing, and storing frequency instructions across the entire atomic stack.</p></div>
+        <div class="card"><div class="card-icon">💎</div><h4>Ruby &amp; Gemstone Arrays</h4><p>Ruby (Cr-doped Al₂O₃) is a natural frequency lens — concentrating and focusing the resonance beam from the Nickel-Silver base into a coherent probability-manipulation field.</p></div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         TOOLS — SECTION MARKER
+         ================================================== -->
+    <div id="tools" style="padding:1.5rem 3rem .5rem;max-width:960px;">
+      <span class="section-label">Experiment</span>
+      <h2 style="font-size:1.8rem;">Interactive <span class="gradient-text">Tools</span></h2>
+    </div>
+
+    <!-- TOOL 1: Resonance Ratio Calculator -->
+    <section id="t-ratio" class="ros-section">
+      <span class="section-label">Tool 1 of 4</span>
+      <h3>📐 Resonance Ratio Calculator</h3>
+      <p style="margin-bottom:1rem;">Select two elements. The calculator outputs their mass ratio, snap-point frequency, and operational pairing notes.</p>
+
+      <div class="tool-panel">
+        <div class="tool-header"><span class="dot"></span>Resonance Ratio Engine</div>
+        <div class="tool-body">
+          <div class="ctrl-row">
+            <div class="ctrl-group">
+              <label for="elem-a">Element A (Base)</label>
+              <select id="elem-a" class="ctrl-select"></select>
+            </div>
+            <div class="ctrl-group">
+              <label for="elem-b">Element B (Pilot)</label>
+              <select id="elem-b" class="ctrl-select"></select>
+            </div>
+            <button class="run-btn" id="calc-ratio">Calculate →</button>
+          </div>
+          <div class="result-box" id="ratio-result">
+            <em style="color:rgba(255,255,255,.3);">Select two elements and click Calculate…</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOL 2: Universal Code Interpreter -->
+    <section id="t-code" class="ros-section">
+      <span class="section-label">Tool 2 of 4</span>
+      <h3>🔢 Universal Code Interpreter</h3>
+      <p style="margin-bottom:1rem;">Enter one or more code numbers (1–114), separated by spaces. Outputs plain-language meanings, element associations, and your action stack.</p>
+
+      <div class="tool-panel">
+        <div class="tool-header"><span class="dot"></span>Code Stack Interpreter</div>
+        <div class="tool-body">
+          <div class="ctrl-row">
+            <div class="ctrl-group">
+              <label for="code-input">Code Sequence (e.g. 28 47 79)</label>
+              <input id="code-input" class="ctrl-input" type="text" placeholder="Enter numbers 1–114 separated by spaces…" />
+            </div>
+            <button class="run-btn" id="run-code">Interpret →</button>
+          </div>
+          <div class="result-box" id="code-result">
+            <em style="color:rgba(255,255,255,.3);">Enter a code sequence above…</em>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOL 3: Atomic Stack Visualizer -->
+    <section id="t-stack" class="ros-section">
+      <span class="section-label">Tool 3 of 4</span>
+      <h3>⚛️ Atomic Stack Visualizer</h3>
+      <p style="margin-bottom:1rem;">Select an element to visualise its hydrogen-frequency layers as a nested orbital model. Layers pulse at their proportional resonance rate.</p>
+
+      <div class="tool-panel">
+        <div class="tool-header"><span class="dot"></span>Nested Hydrogen Model</div>
+        <div class="tool-body">
+          <div class="ctrl-row">
+            <div class="ctrl-group">
+              <label for="stack-elem">Element</label>
+              <select id="stack-elem" class="ctrl-select"></select>
+            </div>
+            <div class="ctrl-group">
+              <label for="stack-speed">Pulse Speed</label>
+              <select id="stack-speed" class="ctrl-select">
+                <option value="1">Slow</option>
+                <option value="2" selected>Normal</option>
+                <option value="4">Fast</option>
+              </select>
+            </div>
+            <button class="run-btn" id="run-stack">Visualize →</button>
+          </div>
+          <div class="stack-canvas-wrap">
+            <canvas id="stackCanvas" width="800" height="360" role="img" aria-label="Atomic stack orbital visualizer"></canvas>
+          </div>
+          <div id="stack-info" style="margin-top:.75rem;font-size:.82rem;color:var(--c-muted);font-family:var(--font-mono, monospace);min-height:2rem;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOL 4: Signal Generator -->
+    <section id="t-signal" class="ros-section">
+      <span class="section-label">Tool 4 of 4</span>
+      <h3>📡 Signal Generator — Atomic Frequency Driver</h3>
+      <p style="margin-bottom:1rem;">Generate precise audio-frequency tones via the Web Audio API. Set waveform, frequency, amplitude, and LFO modulation. Use headphones or speakers.</p>
+
+      <div class="disclaimer" style="margin-bottom:1rem;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>Start at low volume. Sustained tones at high volume can cause hearing discomfort. This tool generates audio frequencies — not ultrasonic or EM radiation.</span>
+      </div>
+
+      <div class="tool-panel">
+        <div class="tool-header"><span class="dot"></span>Atomic Frequency Driver · Web Audio Engine</div>
+        <div class="tool-body">
+
+          <!-- Waveform selector -->
+          <label style="font-size:.75rem;font-weight:600;color:var(--c-muted);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:.5rem;">Waveform</label>
+          <div class="wave-btns">
+            <button class="wave-btn active" data-wave="sine">∿ Sine</button>
+            <button class="wave-btn" data-wave="square">⊓ Square</button>
+            <button class="wave-btn" data-wave="triangle">△ Triangle</button>
+            <button class="wave-btn" data-wave="sawtooth">⊿ Sawtooth</button>
+          </div>
+
+          <!-- Oscilloscope -->
+          <div class="sig-display">
+            <canvas id="sigCanvas" width="800" height="120" role="img" aria-label="Oscilloscope waveform display"></canvas>
+          </div>
+
+          <!-- Controls grid -->
+          <div class="sig-controls">
+            <div class="sig-ctrl">
+              <label>Frequency (Hz)</label>
+              <input type="range" id="sig-freq" min="1" max="2000" value="432" step="1" />
+              <span class="sig-val" id="sig-freq-val">432 Hz</span>
+            </div>
+            <div class="sig-ctrl">
+              <label>Amplitude</label>
+              <input type="range" id="sig-amp" min="0" max="100" value="40" step="1" />
+              <span class="sig-val" id="sig-amp-val">40%</span>
+            </div>
+            <div class="sig-ctrl">
+              <label>LFO Rate (Hz)</label>
+              <input type="range" id="sig-lfo" min="0" max="20" value="0" step="0.1" />
+              <span class="sig-val" id="sig-lfo-val">Off</span>
+            </div>
+            <div class="sig-ctrl">
+              <label>LFO Depth</label>
+              <input type="range" id="sig-lfo-depth" min="0" max="200" value="50" step="1" />
+              <span class="sig-val" id="sig-lfo-depth-val">50 Hz</span>
+            </div>
+          </div>
+
+          <!-- Preset frequencies -->
+          <div style="margin-bottom:1rem;">
+            <div style="font-size:.75rem;font-weight:600;color:var(--c-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem;">Presets</div>
+            <div style="display:flex;gap:.4rem;flex-wrap:wrap;">
+              <button class="code-chip freq-preset" data-f="7.83">7.83 Hz — Schumann</button>
+              <button class="code-chip freq-preset" data-f="8">8 Hz — Hot Core θ</button>
+              <button class="code-chip freq-preset" data-f="40">40 Hz — Gamma γ</button>
+              <button class="code-chip freq-preset" data-f="44">44 Hz — WS Harmonic</button>
+              <button class="code-chip freq-preset" data-f="88">88 Hz — WS Threshold</button>
+              <button class="code-chip freq-preset" data-f="432">432 Hz — Natural A</button>
+              <button class="code-chip freq-preset" data-f="528">528 Hz — Solfeggio</button>
+              <button class="code-chip freq-preset" data-f="639">639 Hz — Connection</button>
+              <button class="code-chip freq-preset" data-f="852">852 Hz — Intuition</button>
+              <button class="code-chip freq-preset" data-f="963">963 Hz — Crown</button>
+            </div>
+          </div>
+
+          <button class="power-btn" id="sig-power">▶ START SIGNAL</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         REFERENCE — CODE DICTIONARY
+         ================================================== -->
+    <div id="reference" style="padding:1.5rem 3rem .5rem;max-width:960px;">
+      <span class="section-label">Reference</span>
+      <h2 style="font-size:1.8rem;">Code <span class="gradient-text">Dictionary</span> 1–114</h2>
+      <p style="margin-top:.5rem;">Every element / code number with its operational meaning, metaphysical association, and resonance band.</p>
+    </div>
+
+    <section class="ros-section" style="padding-top:1rem;">
+      <div class="search-bar">
+        <input type="text" id="dict-search" placeholder="Search code, element, or meaning…" aria-label="Search the code dictionary" />
+      </div>
+      <div class="code-table-wrap">
+        <table class="code-table" aria-label="Universal Operational Code Dictionary 1–114">
+          <thead>
+            <tr>
+              <th>Code #</th>
+              <th>Element</th>
+              <th>Symbol</th>
+              <th>Operational Meaning</th>
+              <th>Association</th>
+            </tr>
+          </thead>
+          <tbody id="dict-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         PROTOCOLS
+         ================================================== -->
+    <div id="protocols" style="padding:1.5rem 3rem .5rem;max-width:960px;">
+      <span class="section-label">Guided Protocols</span>
+      <h2 style="font-size:1.8rem;">Step-by-Step <span class="gradient-text">Recipes</span></h2>
+    </div>
+
+    <section class="ros-section" style="padding-top:1rem;">
+      <div class="grid-2">
+
+        <div class="protocol-card">
+          <div class="card-icon">🏥</div>
+          <h4>Health Room Stabilizer</h4>
+          <p>Tune the local field for cellular coherence and oxygen-resonance enhancement.</p>
+          <ol class="protocol-steps">
+            <li><span class="step-num">1</span>Arrange 54-nickel stack in a circle (1 War Nickel at north).</li>
+            <li><span class="step-num">2</span>Set signal generator to 432 Hz sine, 30% amplitude.</li>
+            <li><span class="step-num">3</span>Invoke code sequence: <span class="code-chip">8</span><span class="code-chip">28</span><span class="code-chip">47</span></li>
+            <li><span class="step-num">4</span>Run for 20 minutes. Increase LFO to 1.5 Hz after 10 min.</li>
+            <li><span class="step-num">5</span>End with code <span class="code-chip">84</span> to seal the field.</li>
+          </ol>
+        </div>
+
+        <div class="protocol-card">
+          <div class="card-icon">💎</div>
+          <h4>Ruby Lens Focusing</h4>
+          <p>Direct the Nickel-Silver base field through a ruby array for probability amplification.</p>
+          <ol class="protocol-steps">
+            <li><span class="step-num">1</span>Flash Beryllium substrate with code <span class="code-chip">4</span><span class="code-chip">79</span><span class="code-chip">47</span>.</li>
+            <li><span class="step-num">2</span>Place ruby at geometric focus point of triangle base (Beta vertex).</li>
+            <li><span class="step-num">3</span>Set signal to 528 Hz triangle wave.</li>
+            <li><span class="step-num">4</span>Activate 84-shield: invoke <span class="code-chip">84</span> before powering.</li>
+            <li><span class="step-num">5</span>Increase amplitude 10% every 2 min up to 60%.</li>
+          </ol>
+        </div>
+
+        <div class="protocol-card">
+          <div class="card-icon">🌍</div>
+          <h4>Gold-Vein Re-Melter</h4>
+          <p>Re-activate a dormant mineral vein circuit using quantum re-melting resonance.</p>
+          <ol class="protocol-steps">
+            <li><span class="step-num">1</span>Map vein orientation (compass heading of strike direction).</li>
+            <li><span class="step-num">2</span>Calculate formation frequency using Ratio Calculator: Gold ↔ Quartz.</li>
+            <li><span class="step-num">3</span>Set signal generator to calculated frequency, sawtooth wave.</li>
+            <li><span class="step-num">4</span>Orient B Plate perpendicular to vein strike.</li>
+            <li><span class="step-num">5</span>Run 15-minute sweep ±10 Hz around formation frequency.</li>
+          </ol>
+        </div>
+
+        <div class="protocol-card">
+          <div class="card-icon">🧘</div>
+          <h4>Intent-to-Action Stack</h4>
+          <p>Translate a desired outcome into a precise frequency + code sequence.</p>
+          <ol class="protocol-steps">
+            <li><span class="step-num">1</span>Define intent (e.g., "quieten stress").</li>
+            <li><span class="step-num">2</span>Use Code Interpreter to find matching stack (e.g., <span class="code-chip">3</span><span class="code-chip">8</span><span class="code-chip">20</span>).</li>
+            <li><span class="step-num">3</span>Set signal to 8 Hz LFO depth 80 Hz over 40 Hz carrier.</li>
+            <li><span class="step-num">4</span>Visualize target state using Stack Visualizer.</li>
+            <li><span class="step-num">5</span>Run for 30 minutes while holding conscious intent.</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SAFETY & DISCLOSURE
+         ================================================== -->
+    <section id="safety-note" class="ros-section">
+      <span class="section-label">Safety &amp; Disclosure</span>
+      <h3>⚠️ Safety Notes &amp; Operating Guidelines</h3>
+      <div class="disclaimer" style="margin-top:1.25rem;margin-bottom:1rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span>This platform presents a <strong>speculative creative and philosophical framework</strong>. No claims of medical, therapeutic, or physical efficacy are made. For established science, consult peer-reviewed sources.</span>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="card-icon">🔋</div><h4>High-Voltage Safety</h4><p>Any real electrical experimentation requires licensed electrician oversight. Never work on live circuits without proper isolation and PPE.</p></div>
+        <div class="card"><div class="card-icon">☢️</div><h4>Radiation — Never Use Real Po-84</h4><p>Polonium-210 is extremely toxic and legally controlled. All Po-84 references in this framework are purely symbolic/theoretical.</p></div>
+        <div class="card"><div class="card-icon">🩺</div><h4>No Medical Claims</h4><p>Nothing on this platform should be used as medical advice. Consult qualified healthcare providers for any health-related concerns.</p></div>
+      </div>
+    </section>
+
+  </main><!-- end .ros-content -->
+</div><!-- end .ros-layout -->
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+    <span>© 2026 <strong style="color:var(--c-white);">www-infinity4 · Resonant OS</strong></span>
+    <span style="display:flex;gap:1.5rem;font-size:.82rem;">
+      <a href="index.html" style="color:var(--c-muted);">Quanta Mic</a>
+      <a href="bci-resonator.html" style="color:var(--c-muted);">B Plate BCI</a>
+      <a href="journal-1957.html" style="color:var(--c-muted);">1957 Notes</a>
+      <a href="https://github.com/www-infinity4/Quanta-Microphone" target="_blank" rel="noopener" style="color:var(--c-muted);">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+<!-- ============================================================
+     APP SCRIPTS
+     ============================================================ -->
+<script src="app.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ================================================================
+     ELEMENT DATA — 118 elements with atomic mass, category, and
+     operational meanings for the Resonant OS code dictionary
+     ================================================================ */
+  var ELEMENTS = [
+    {Z:1,  sym:'H',  name:'Hydrogen',    mass:1.008,   cat:'nonmetal',    meaning:'Foundation / Source',     assoc:'Origin, life-force, water carrier'},
+    {Z:2,  sym:'He', name:'Helium',      mass:4.003,   cat:'noble',       meaning:'Lift / Expansion',        assoc:'Ascension, lightness, primordial gas'},
+    {Z:3,  sym:'Li', name:'Lithium',     mass:6.941,   cat:'alkali',      meaning:'Compressed He-3 Storage', assoc:'Battery, mood stabilizer, memory'},
+    {Z:4,  sym:'Be', name:'Beryllium',   mass:9.012,   cat:'alkali-earth',meaning:'Static Pre-Load / Flash', assoc:'Intent storage, firmware, spring metal'},
+    {Z:5,  sym:'B',  name:'Boron',       mass:10.81,   cat:'metalloid',   meaning:'Bridge / Connector',      assoc:'Neural links, semiconductor'},
+    {Z:6,  sym:'C',  name:'Carbon',      mass:12.011,  cat:'nonmetal',    meaning:'Life Code / Structure',   assoc:'DNA, graphene, diamond lens'},
+    {Z:7,  sym:'N',  name:'Nitrogen',    mass:14.007,  cat:'nonmetal',    meaning:'Atmosphere / Clarity',    assoc:'Air purification, thought clarity'},
+    {Z:8,  sym:'O',  name:'Oxygen',      mass:15.999,  cat:'nonmetal',    meaning:'Activation / Ignition',   assoc:'Fire, breath, cellular ignition'},
+    {Z:9,  sym:'F',  name:'Fluorine',    mass:18.998,  cat:'halogen',     meaning:'Seal / Protect',          assoc:'Shielding, cavity protection'},
+    {Z:10, sym:'Ne', name:'Neon',        mass:20.18,   cat:'noble',       meaning:'Signal / Broadcast',      assoc:'Illumination, sign, plasma light'},
+    {Z:11, sym:'Na', name:'Sodium',      mass:22.99,   cat:'alkali',      meaning:'Flow / Conductance',      assoc:'Nerve signal, salt, ocean current'},
+    {Z:12, sym:'Mg', name:'Magnesium',   mass:24.305,  cat:'alkali-earth',meaning:'Balance / Grounding',     assoc:'Cellular balance, earth mineral'},
+    {Z:13, sym:'Al', name:'Aluminium',   mass:26.982,  cat:'post-trans',  meaning:'Reflection / Mirror',     assoc:'Radar, signal mirror, lightweight shield'},
+    {Z:14, sym:'Si', name:'Silicon',     mass:28.086,  cat:'metalloid',   meaning:'Memory / Code Substrate', assoc:'Computer, quartz analogue, chip'},
+    {Z:15, sym:'P',  name:'Phosphorus',  mass:30.974,  cat:'nonmetal',    meaning:'Glow / Ignite Memory',    assoc:'Bioluminescence, DNA backbone'},
+    {Z:16, sym:'S',  name:'Sulfur',      mass:32.06,   cat:'nonmetal',    meaning:'Cleanse / Purge',         assoc:'Volcanic purification, hot spring'},
+    {Z:17, sym:'Cl', name:'Chlorine',    mass:35.45,   cat:'halogen',     meaning:'Sanitize / Reset',        assoc:'Water purification, neutraliser'},
+    {Z:18, sym:'Ar', name:'Argon',       mass:39.948,  cat:'noble',       meaning:'Silence / Hold',          assoc:'Inert buffer, noble silence'},
+    {Z:19, sym:'K',  name:'Potassium',   mass:39.098,  cat:'alkali',      meaning:'Family / Cellular Bond',  assoc:'Heart rhythm, family ties, K-channel'},
+    {Z:20, sym:'Ca', name:'Calcium',     mass:40.078,  cat:'alkali-earth',meaning:'Structure / Good for Mom',assoc:'Bone strength, maternal care, foundation'},
+    {Z:21, sym:'Sc', name:'Scandium',    mass:44.956,  cat:'transition',  meaning:'Pioneer / First Step',    assoc:'Rare earth opener, scout element'},
+    {Z:22, sym:'Ti', name:'Titanium',    mass:47.867,  cat:'transition',  meaning:'Strength / Endurance',    assoc:'Bio-compatible, aerospace, warrior metal'},
+    {Z:23, sym:'V',  name:'Vanadium',    mass:50.942,  cat:'transition',  meaning:'Catalyst / Accelerate',   assoc:'Speed up reactions, redox battery'},
+    {Z:24, sym:'Cr', name:'Chromium',    mass:51.996,  cat:'transition',  meaning:'Shield / Harden',         assoc:'Armor, chronium lining (WS), mirror finish'},
+    {Z:25, sym:'Mn', name:'Manganese',   mass:54.938,  cat:'transition',  meaning:'Oxidize / Clear Path',    assoc:'Rust control, brain function, clarity'},
+    {Z:26, sym:'Fe', name:'Iron',        mass:55.845,  cat:'transition',  meaning:'Earth Core / Foundation', assoc:'Earth grid, blood, magnetic memory'},
+    {Z:27, sym:'Co', name:'Cobalt',      mass:58.933,  cat:'transition',  meaning:'Compass / Navigation',    assoc:'Magnetic north, vitamin B12, blue pigment'},
+    {Z:28, sym:'Ni', name:'Nickel',      mass:58.693,  cat:'transition',  meaning:'Hydrogen Command Center', assoc:'28 H-layers, resonance hub, currency base'},
+    {Z:29, sym:'Cu', name:'Copper',      mass:63.546,  cat:'transition',  meaning:'Conductor / Channel',     assoc:'Nerve of the grid, WS tube, ancient wire'},
+    {Z:30, sym:'Zn', name:'Zinc',        mass:65.38,   cat:'transition',  meaning:'Repair / Immune Boost',   assoc:'Cell repair, immune signal, protective'},
+    {Z:31, sym:'Ga', name:'Gallium',     mass:69.723,  cat:'post-trans',  meaning:'Melt / Transition',       assoc:'Low-melt metal, phase bridge'},
+    {Z:32, sym:'Ge', name:'Germanium',   mass:72.63,   cat:'metalloid',   meaning:'Semi-State / Threshold',  assoc:'First semiconductor, detection diode'},
+    {Z:33, sym:'As', name:'Arsenic',     mass:74.922,  cat:'metalloid',   meaning:'Warning / Boundary',      assoc:'Toxic limit marker, clear border'},
+    {Z:34, sym:'Se', name:'Selenium',    mass:78.971,  cat:'nonmetal',    meaning:'Antioxidant / Protect',   assoc:'Thyroid support, light sensitivity'},
+    {Z:35, sym:'Br', name:'Bromine',     mass:79.904,  cat:'halogen',     meaning:'Slow Down / Dampen',      assoc:'Fire retardant, calm signal'},
+    {Z:36, sym:'Kr', name:'Krypton',     mass:83.798,  cat:'noble',       meaning:'Flash / Crystallize',     assoc:'Laser gas, moment of clarity, photo flash'},
+    {Z:37, sym:'Rb', name:'Rubidium',    mass:85.468,  cat:'alkali',      meaning:'Atomic Clock / Precision',assoc:'Time standard, frequency reference'},
+    {Z:38, sym:'Sr', name:'Strontium',   mass:87.62,   cat:'alkali-earth',meaning:'Bone Memory',             assoc:'Skeletal record, bone density, calcium twin'},
+    {Z:39, sym:'Y',  name:'Yttrium',     mass:88.906,  cat:'transition',  meaning:'Amplify / Boost Signal',  assoc:'Laser host, superconductor dopant'},
+    {Z:40, sym:'Zr', name:'Zirconium',   mass:91.224,  cat:'transition',  meaning:'Purity / Refractor',      assoc:'Nuclear grade pure, gemstone zircon'},
+    {Z:41, sym:'Nb', name:'Niobium',     mass:92.906,  cat:'transition',  meaning:'Superconducting Path',    assoc:'Quantum coherence, cryogenic link'},
+    {Z:42, sym:'Mo', name:'Molybdenum',  mass:95.95,   cat:'transition',  meaning:'Tough Bridge / Alloy',    assoc:'High-temp stability, enzyme co-factor'},
+    {Z:43, sym:'Tc', name:'Technetium',  mass:98,      cat:'transition',  meaning:'Artificial / Reset Code', assoc:'No stable isotope — pure reset signal'},
+    {Z:44, sym:'Ru', name:'Ruthenium',   mass:101.07,  cat:'transition',  meaning:'Catalyst Pair / Tandem',  assoc:'Solar cell catalyst, hard finish'},
+    {Z:45, sym:'Rh', name:'Rhodium',     mass:102.906, cat:'transition',  meaning:'Reflect Light / Polish',  assoc:'Highest reflectance, mirror coat'},
+    {Z:46, sym:'Pd', name:'Palladium',   mass:106.42,  cat:'transition',  meaning:'Absorb Hydrogen / Store', assoc:'H₂ absorption, cold-fusion catalyst'},
+    {Z:47, sym:'Ag', name:'Silver',      mass:107.868, cat:'transition',  meaning:'Master Oscillator / Pure Broadcast', assoc:'War Nickel pilot, conductivity peak, antimicrobial'},
+    {Z:48, sym:'Cd', name:'Cadmium',     mass:112.414, cat:'transition',  meaning:'Dampen / Control Decay',  assoc:'Reactor control rod, phosphor battery'},
+    {Z:49, sym:'In', name:'Indium',      mass:114.818, cat:'post-trans',  meaning:'Soft Gate / Entry',       assoc:'Touch screen, low-friction gate'},
+    {Z:50, sym:'Sn', name:'Tin',         mass:118.71,  cat:'post-trans',  meaning:'Preserve / Seal Record',  assoc:'Solder, tin can memory, Bronze Age'},
+    {Z:51, sym:'Sb', name:'Antimony',    mass:121.76,  cat:'metalloid',   meaning:'Fire Code / Ignite Stack',assoc:'Flame retardant paradox, ancient kohl'},
+    {Z:52, sym:'Te', name:'Tellurium',   mass:127.6,   cat:'metalloid',   meaning:'Earth Broadcast',         assoc:'Rarest stable element, telluric current'},
+    {Z:53, sym:'I',  name:'Iodine',      mass:126.904, cat:'halogen',     meaning:'Thyroid / Master Gland',  assoc:'Metabolism regulation, iodize water'},
+    {Z:54, sym:'Xe', name:'Xenon',       mass:131.293, cat:'noble',       meaning:'Ion Drive / Propulsion',  assoc:'Satellite thruster, anaesthetic, alien light'},
+    {Z:55, sym:'Cs', name:'Cesium',      mass:132.905, cat:'alkali',      meaning:'Time / Atomic Precision', assoc:'Atomic clock standard, GPS base signal'},
+    {Z:56, sym:'Ba', name:'Barium',      mass:137.327, cat:'alkali-earth',meaning:'X-Ray View / See Through',assoc:'Medical imaging, barium meal, see-through'},
+    {Z:57, sym:'La', name:'Lanthanum',   mass:138.905, cat:'lanthanide',  meaning:'Open Gateway',            assoc:'Begin rare-earth chain, optical glass'},
+    {Z:58, sym:'Ce', name:'Cerium',      mass:140.116, cat:'lanthanide',  meaning:'Catalytic Clean',         assoc:'Self-cleaning ovens, auto catalyst'},
+    {Z:59, sym:'Pr', name:'Praseodymium',mass:140.908, cat:'lanthanide',  meaning:'Green Light / Go',        assoc:'Green signal, laser glass, neodymium twin'},
+    {Z:60, sym:'Nd', name:'Neodymium',   mass:144.242, cat:'lanthanide',  meaning:'Strong Magnet / Lock On', assoc:'N52 magnets (WS rig), hard drive, motor'},
+    {Z:61, sym:'Pm', name:'Promethium',  mass:145,     cat:'lanthanide',  meaning:'Unstable Signal / Alert', assoc:'No stable form — temporal warning signal'},
+    {Z:62, sym:'Sm', name:'Samarium',    mass:150.36,  cat:'lanthanide',  meaning:'Permanent Hold',          assoc:'SmCo magnets, long-duration field'},
+    {Z:63, sym:'Eu', name:'Europium',    mass:151.964, cat:'lanthanide',  meaning:'Authenticity / Verify',   assoc:'Euro banknote phosphor, anti-counterfeit'},
+    {Z:64, sym:'Gd', name:'Gadolinium',  mass:157.25,  cat:'lanthanide',  meaning:'MRI / Deep Scan',         assoc:'Medical contrast, neutron absorber'},
+    {Z:65, sym:'Tb', name:'Terbium',     mass:158.925, cat:'lanthanide',  meaning:'Colour Code / Spectrum',  assoc:'RGB phosphor, colour calibration'},
+    {Z:66, sym:'Dy', name:'Dysprosium',  mass:162.5,   cat:'lanthanide',  meaning:'High-Temp Magnet',        assoc:'EV motor magnet, heat-stable field'},
+    {Z:67, sym:'Ho', name:'Holmium',     mass:164.93,  cat:'lanthanide',  meaning:'Laser Surgery / Precision',assoc:'Ho:YAG laser, high-focus application'},
+    {Z:68, sym:'Er', name:'Erbium',      mass:167.259, cat:'lanthanide',  meaning:'Fibre Optic / Long Range',assoc:'1550 nm amplifier, global comms backbone'},
+    {Z:69, sym:'Tm', name:'Thulium',     mass:168.934, cat:'lanthanide',  meaning:'Rare Clarity / Hidden',   assoc:'Rarest stable lanthanide, hidden signal'},
+    {Z:70, sym:'Yb', name:'Ytterbium',   mass:173.054, cat:'lanthanide',  meaning:'Quantum Clock / Reference',assoc:'Atomic lattice clock, ultra-precision'},
+    {Z:71, sym:'Lu', name:'Lutetium',    mass:174.967, cat:'lanthanide',  meaning:'End of Rare Earth Chain', assoc:'PET scanner, close rare-earth sequence'},
+    {Z:72, sym:'Hf', name:'Hafnium',     mass:178.49,  cat:'transition',  meaning:'Nuclear Gate / Control',  assoc:'Control rod backup, chip gate insulator'},
+    {Z:73, sym:'Ta', name:'Tantalum',    mass:180.948, cat:'transition',  meaning:'Capacitor / Hold Charge', assoc:'Phone capacitor, biocompatible implant'},
+    {Z:74, sym:'W',  name:'Tungsten',    mass:183.84,  cat:'transition',  meaning:'Extreme Endurance / Heat',assoc:'Highest melting point, filament, armour'},
+    {Z:75, sym:'Re', name:'Rhenium',     mass:186.207, cat:'transition',  meaning:'Rare Alloy / Performance',assoc:'Jet engine superalloy, rare catalyst'},
+    {Z:76, sym:'Os', name:'Osmium',      mass:190.23,  cat:'transition',  meaning:'Density Peak / Anchor',   assoc:'Densest element, hard tip, anchor point'},
+    {Z:77, sym:'Ir', name:'Iridium',     mass:192.217, cat:'transition',  meaning:'Cosmic / Impact Marker',  assoc:'K-Pg boundary layer, meteor signature'},
+    {Z:78, sym:'Pt', name:'Platinum',    mass:195.084, cat:'transition',  meaning:'Catalyst / Noble Peak',   assoc:'Fuel cell heart, highest jewellery grade'},
+    {Z:79, sym:'Au', name:'Gold',        mass:196.967, cat:'transition',  meaning:'Perfect Conductor / Vein Circuit', assoc:'Fossilized grid, perfect resonance metal'},
+    {Z:80, sym:'Hg', name:'Mercury',     mass:200.592, cat:'transition',  meaning:'Phase Mirror / Liquid Gold',assoc:'Frequency reflection, thermostat, phase boundary'},
+    {Z:81, sym:'Tl', name:'Thallium',    mass:204.38,  cat:'post-trans',  meaning:'Poisoned Gate / Warning', assoc:'Toxic threshold marker, detect contamination'},
+    {Z:82, sym:'Pb', name:'Lead',        mass:207.2,   cat:'post-trans',  meaning:'Radiation Shield / Block',assoc:'X-ray protection, heavy damper'},
+    {Z:83, sym:'Bi', name:'Bismuth',     mass:208.98,  cat:'post-trans',  meaning:'Rainbow / Spectrum Close',assoc:'Iridescent surface, lowest toxicity heavy metal'},
+    {Z:84, sym:'Po', name:'Polonium',    mass:209,     cat:'metalloid',   meaning:'84 Shield / Control / Hydrogen Well', assoc:'Masking signal, radiation cage ⚠ highly toxic'},
+    {Z:85, sym:'At', name:'Astatine',    mass:210,     cat:'halogen',     meaning:'Extreme Rarity / Edge Signal', assoc:'Most rare natural element, alpha emitter'},
+    {Z:86, sym:'Rn', name:'Radon',       mass:222,     cat:'noble',       meaning:'Hidden Decay / Monitor',  assoc:'Basement gas detector, invisible signal'},
+    {Z:87, sym:'Fr', name:'Francium',    mass:223,     cat:'alkali',      meaning:'Unstable Authority',      assoc:'Most unstable alkali — fleeting power signal'},
+    {Z:88, sym:'Ra', name:'Radium',      mass:226,     cat:'alkali-earth',meaning:'88 Hz Bridge / Glow',     assoc:'WS 88 Hz threshold, luminescence, Curie point'},
+    {Z:89, sym:'Ac', name:'Actinium',    mass:227,     cat:'actinide',    meaning:'Begin Transmutation Chain',assoc:'Actinide series opener, alpha source'},
+    {Z:90, sym:'Th', name:'Thorium',     mass:232.038, cat:'actinide',    meaning:'Thorium Cycle / Clean Energy', assoc:'Molten salt reactor fuel, long-burn'},
+    {Z:91, sym:'Pa', name:'Protactinium',mass:231.036, cat:'actinide',    meaning:'Precursor / Pre-Load',    assoc:'Thorium decay product, pre-ignition state'},
+    {Z:92, sym:'U',  name:'Uranium',     mass:238.029, cat:'actinide',    meaning:'Power Core / Long Memory', assoc:'Fission anchor, deep time record'},
+    {Z:93, sym:'Np', name:'Neptunium',   mass:237,     cat:'actinide',    meaning:'Neptune Reservoir / Outer Collection', assoc:'Outer planet phonon sink, deep gas capture'},
+    {Z:94, sym:'Pu', name:'Plutonium',   mass:244,     cat:'actinide',    meaning:'Compressed Power / Dense',assoc:'Highest energy density, RTG power cell'},
+    {Z:95, sym:'Am', name:'Americium',   mass:243,     cat:'actinide',    meaning:'Smoke Detect / Monitor',  assoc:'Smoke detector source, local field alert'},
+    {Z:96, sym:'Cm', name:'Curium',      mass:247,     cat:'actinide',    meaning:'Honor Discovery / Archive',assoc:'Named for Curies, archive of science'},
+    {Z:97, sym:'Bk', name:'Berkelium',   mass:247,     cat:'actinide',    meaning:'Gate to Superheavy',      assoc:'Bridge element to transuranium synthesis'},
+    {Z:98, sym:'Cf', name:'Californium', mass:251,     cat:'actinide',    meaning:'Critical Mass / Neutron Source', assoc:'Portable neutron source, startup rod'},
+    {Z:99, sym:'Es', name:'Einsteinium', mass:252,     cat:'actinide',    meaning:'Theoretical Limit / Genius Point', assoc:'Named for Einstein, thought-experiment apex'},
+    {Z:100,sym:'Fm', name:'Fermium',     mass:257,     cat:'actinide',    meaning:'Fermion Field / Quantum Stat', assoc:'Fundamental quantum statistics boundary'},
+    {Z:101,sym:'Md', name:'Mendelevium', mass:258,     cat:'actinide',    meaning:'Table Complete / Ordered', assoc:'Named for periodic table creator, system order'},
+    {Z:102,sym:'No', name:'Nobelium',    mass:259,     cat:'actinide',    meaning:'Nobel Prize / Excellence', assoc:'Peak achievement marker, award frequency'},
+    {Z:103,sym:'Lr', name:'Lawrencium',  mass:266,     cat:'actinide',    meaning:'Close Actinide Cycle',    assoc:'Final actinide, cycle completion'},
+    {Z:104,sym:'Rf', name:'Rutherfordium',mass:267,    cat:'trans-act',   meaning:'New Period / Beyond Known',assoc:'Transactinide threshold, post-classical'},
+    {Z:105,sym:'Db', name:'Dubnium',     mass:268,     cat:'trans-act',   meaning:'Collaboration / Joint',   assoc:'Named jointly USSR/USA — cooperative signal'},
+    {Z:106,sym:'Sg', name:'Seaborgium',  mass:271,     cat:'trans-act',   meaning:'Synthesize / Artificial Forge', assoc:'All isotopes synthetic, pure creation'},
+    {Z:107,sym:'Bh', name:'Bohrium',     mass:272,     cat:'trans-act',   meaning:'Quantum Leap / Bohr Model',assoc:'Honors quantum model origin, electron orbit'},
+    {Z:108,sym:'Hs', name:'Hassium',     mass:277,     cat:'trans-act',   meaning:'Dense Core / Inner Heavy', assoc:'Predicted densest element, inner anchor'},
+    {Z:109,sym:'Mt', name:'Meitnerium',  mass:278,     cat:'trans-act',   meaning:'Fission Memory / Discovery',assoc:'Named for Lise Meitner, nuclear split memory'},
+    {Z:110,sym:'Ds', name:'Darmstadtium',mass:281,     cat:'trans-act',   meaning:'Temporary / Fleeting State',assoc:'Ultra-short half-life, moment in time'},
+    {Z:111,sym:'Rg', name:'Roentgenium', mass:282,     cat:'trans-act',   meaning:'X-Ray Vision / See All',  assoc:'Named for Röntgen, penetrating sight'},
+    {Z:112,sym:'Cn', name:'Copernicium', mass:285,     cat:'trans-act',   meaning:'Orbital Truth / Heliocentric',assoc:'Named for Copernicus, correct model'},
+    {Z:113,sym:'Nh', name:'Nihonium',    mass:286,     cat:'trans-act',   meaning:'Eastern Path / Rising Sun',assoc:'First Asian-discovered element, east origin'},
+    {Z:114,sym:'Fl', name:'Flerovium',   mass:289,     cat:'trans-act',   meaning:'Island of Stability / Horizon',assoc:'Near predicted stable superheavy island, future anchor'}
+  ];
+
+  /* ================================================================
+     POPULATE ELEMENT SELECTS
+     ================================================================ */
+  function populateSelect(id, selectedZ) {
+    var sel = document.getElementById(id);
+    if (!sel) return;
+    ELEMENTS.forEach(function(el) {
+      var opt = document.createElement('option');
+      opt.value = el.Z;
+      opt.textContent = el.Z + ' — ' + el.sym + ' · ' + el.name + ' (' + el.mass + ')';
+      if (el.Z === selectedZ) opt.selected = true;
+      sel.appendChild(opt);
+    });
+  }
+  populateSelect('elem-a', 28);   // default: Nickel
+  populateSelect('elem-b', 47);   // default: Silver
+  populateSelect('stack-elem', 28);
+
+  /* ================================================================
+     RATIO CALCULATOR
+     ================================================================ */
+  document.getElementById('calc-ratio').addEventListener('click', function() {
+    var za = parseInt(document.getElementById('elem-a').value);
+    var zb = parseInt(document.getElementById('elem-b').value);
+    var ea = ELEMENTS.find(function(e){ return e.Z===za; });
+    var eb = ELEMENTS.find(function(e){ return e.Z===zb; });
+    if (!ea || !eb) return;
+
+    var ratio     = (eb.mass / ea.mass).toFixed(4);
+    var invRatio  = (ea.mass / eb.mass).toFixed(4);
+    var snapFreq  = (ea.mass * 8).toFixed(2);   // speculative: mass × 8Hz base
+    var bridgeHz  = (Math.abs(eb.mass - ea.mass) * 1.618).toFixed(2); // golden ratio bridge
+    var sumZ      = za + zb;
+    var productZ  = za * zb;
+
+    var box = document.getElementById('ratio-result');
+    box.innerHTML =
+      row('Element A', ea.Z+' — '+ea.sym+' ('+ea.name+')', 'cyan') +
+      row('Element B', eb.Z+' — '+eb.sym+' ('+eb.name+')', 'cyan') +
+      row('Mass Ratio B/A', ratio+' : 1', 'green') +
+      row('Mass Ratio A/B', invRatio+' : 1', '') +
+      row('A Snap-Point Frequency', snapFreq+' Hz', 'amber') +
+      row('Bridge Frequency (φ)', bridgeHz+' Hz', 'pink') +
+      row('Combined Code (Z sum)', sumZ, '') +
+      row('Stack Code (Z product mod 114)', (productZ % 114) || 114, '') +
+      '<div style="margin-top:.6rem;font-size:.78rem;color:rgba(255,255,255,.3);">Meaning A: ' + ea.meaning + ' · Meaning B: ' + eb.meaning + '</div>';
+  });
+
+  function row(k, v, cls) {
+    return '<div class="r-row"><span class="r-key">'+k+'</span><span class="r-val'+( cls ? ' '+cls : '')+'">'+v+'</span></div>';
+  }
+
+  /* ================================================================
+     CODE INTERPRETER
+     ================================================================ */
+  document.getElementById('run-code').addEventListener('click', runCodeInterp);
+  document.getElementById('code-input').addEventListener('keydown', function(e){ if(e.key==='Enter') runCodeInterp(); });
+
+  function runCodeInterp() {
+    var raw = document.getElementById('code-input').value.trim();
+    if (!raw) return;
+    var nums = raw.split(/[\s,]+/).map(Number).filter(function(n){ return n>=1 && n<=114; });
+    if (!nums.length) {
+      document.getElementById('code-result').innerHTML = '<em style="color:#f59e0b;">No valid codes (1–114) found.</em>';
+      return;
+    }
+    var html = '';
+    var stackMeaning = [];
+    nums.forEach(function(n) {
+      var el = ELEMENTS.find(function(e){ return e.Z===n; });
+      if (!el) return;
+      stackMeaning.push(el.meaning.split('/')[0].trim());
+      html += '<div style="border-bottom:1px solid rgba(255,255,255,.05);padding:.45rem 0;">' +
+        '<span class="code-chip">' + n + '</span> ' +
+        '<strong style="color:#a78bfa;">' + el.sym + ' — ' + el.name + '</strong>' +
+        '<div style="font-size:.8rem;color:rgba(255,255,255,.8);margin-top:.2rem;">Meaning: ' + el.meaning + '</div>' +
+        '<div style="font-size:.75rem;color:var(--c-muted);">Association: ' + el.assoc + '</div>' +
+        '</div>';
+    });
+    html += '<div style="margin-top:.75rem;background:rgba(124,58,237,.15);padding:.6rem .75rem;border-radius:.4rem;font-size:.85rem;">' +
+      '<strong style="color:#a78bfa;">Action Stack:</strong> ' +
+      stackMeaning.join(' → ') +
+      '</div>';
+    document.getElementById('code-result').innerHTML = html;
+  }
+
+  /* ================================================================
+     ATOMIC STACK VISUALIZER (Canvas)
+     ================================================================ */
+  var stackCanvas = document.getElementById('stackCanvas');
+  var stackCtx    = stackCanvas.getContext('2d');
+  var stackAnim   = null;
+  var stackEl     = ELEMENTS.find(function(e){ return e.Z===28; });
+  var stackSpeed  = 2;
+
+  function drawStack(t) {
+    var W = stackCanvas.width, H = stackCanvas.height;
+    var cx = W/2, cy = H/2;
+    var el = stackEl;
+
+    stackCtx.fillStyle = 'rgba(4,1,15,0.35)';
+    stackCtx.fillRect(0,0,W,H);
+
+    var shells = electronShells(el.Z);
+    var maxR   = Math.min(cx, cy) * 0.88;
+    var coreR  = 22;
+
+    // Core (nucleus)
+    var coreGrd = stackCtx.createRadialGradient(cx,cy,0,cx,cy,coreR*2);
+    coreGrd.addColorStop(0,'rgba(255,200,80,0.9)');
+    coreGrd.addColorStop(0.5,'rgba(200,80,20,0.7)');
+    coreGrd.addColorStop(1,'rgba(100,20,5,0)');
+    stackCtx.beginPath();
+    stackCtx.arc(cx,cy,coreR,0,Math.PI*2);
+    stackCtx.fillStyle=coreGrd;
+    stackCtx.fill();
+    // Z label
+    stackCtx.fillStyle='#fff';
+    stackCtx.font='bold 14px Inter,sans-serif';
+    stackCtx.textAlign='center';
+    stackCtx.textBaseline='middle';
+    stackCtx.fillText(el.Z,cx,cy);
+
+    // Orbital shells
+    var colors=['#06b6d4','#7c3aed','#ec4899','#f59e0b','#84cc16','#a78bfa','#06b6d4'];
+    shells.forEach(function(count, si) {
+      var r = coreR*1.8 + (si/(shells.length))*( maxR - coreR*1.8);
+
+      // Orbit ring
+      stackCtx.beginPath();
+      stackCtx.arc(cx,cy,r,0,Math.PI*2);
+      stackCtx.strokeStyle='rgba(255,255,255,0.06)';
+      stackCtx.lineWidth=1;
+      stackCtx.stroke();
+
+      // Electrons
+      for(var ei=0; ei<count; ei++) {
+        var base  = (2*Math.PI*ei/count);
+        var speed = stackSpeed * (0.4 + 0.12*(si+1));
+        var angle = base + t*0.01*speed;
+        var ex    = cx + r*Math.cos(angle);
+        var ey    = cy + r*Math.sin(angle);
+        var col   = colors[si % colors.length];
+
+        // Glow
+        var grd = stackCtx.createRadialGradient(ex,ey,0,ex,ey,7);
+        grd.addColorStop(0,col);
+        grd.addColorStop(1,'rgba(0,0,0,0)');
+        stackCtx.beginPath();
+        stackCtx.arc(ex,ey,7,0,Math.PI*2);
+        stackCtx.fillStyle=grd;
+        stackCtx.fill();
+        // Core electron dot
+        stackCtx.beginPath();
+        stackCtx.arc(ex,ey,3,0,Math.PI*2);
+        stackCtx.fillStyle=col;
+        stackCtx.fill();
+      }
+    });
+
+    // Element info
+    stackCtx.fillStyle='rgba(255,255,255,0.6)';
+    stackCtx.font='12px JetBrains Mono,monospace';
+    stackCtx.textAlign='left';
+    stackCtx.textBaseline='top';
+    stackCtx.fillText(el.sym+' · '+el.name+' · Z='+el.Z+' · '+el.mass+' u',12,10);
+    stackCtx.fillText('Shells: ['+shells.join(', ')+']',12,28);
+  }
+
+  function electronShells(Z) {
+    // Simplified Bohr shell filling: 2,8,18,32,18,12,8,...
+    var max=[2,8,18,32,18,12,8,2];
+    var shells=[], rem=Z;
+    for(var i=0;i<max.length&&rem>0;i++){
+      var n=Math.min(rem,max[i]); shells.push(n); rem-=n;
+    }
+    return shells;
+  }
+
+  function startStackAnim(el, speed) {
+    if(stackAnim) cancelAnimationFrame(stackAnim);
+    var t=0;
+    function loop(){ t++; drawStack(t); stackAnim=requestAnimationFrame(loop); }
+    loop();
+    var info=document.getElementById('stack-info');
+    if(info) info.textContent='Hydrogen layers: '+el.Z+' | Meaning: '+el.meaning+' | '+el.assoc;
+  }
+
+  document.getElementById('run-stack').addEventListener('click', function(){
+    var z = parseInt(document.getElementById('stack-elem').value);
+    stackEl = ELEMENTS.find(function(e){return e.Z===z;}) || stackEl;
+    stackSpeed = parseInt(document.getElementById('stack-speed').value)||2;
+    startStackAnim(stackEl, stackSpeed);
+  });
+  startStackAnim(stackEl, 2);
+
+  /* ================================================================
+     SIGNAL GENERATOR (Web Audio API)
+     ================================================================ */
+  var audioCtx  = null;
+  var oscNode   = null;
+  var gainNode  = null;
+  var lfoNode   = null;
+  var lfoGain   = null;
+  var sigRunning = false;
+  var waveform  = 'sine';
+  var sigCanvas = document.getElementById('sigCanvas');
+  var sigCtx    = sigCanvas ? sigCanvas.getContext('2d') : null;
+  var analyser  = null;
+  var dataArray = null;
+  var drawLoop  = null;
+
+  // Waveform buttons
+  document.querySelectorAll('.wave-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.wave-btn').forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      waveform = btn.dataset.wave;
+      if(oscNode) oscNode.type = waveform;
+    });
+  });
+
+  // Sliders
+  var freqSlider = document.getElementById('sig-freq');
+  var ampSlider  = document.getElementById('sig-amp');
+  var lfoSlider  = document.getElementById('sig-lfo');
+  var lfoDepth   = document.getElementById('sig-lfo-depth');
+
+  if(freqSlider) freqSlider.addEventListener('input', function(){
+    document.getElementById('sig-freq-val').textContent = this.value+' Hz';
+    if(oscNode) oscNode.frequency.setTargetAtTime(parseFloat(this.value), audioCtx.currentTime, 0.01);
+  });
+  if(ampSlider) ampSlider.addEventListener('input', function(){
+    document.getElementById('sig-amp-val').textContent = this.value+'%';
+    if(gainNode) gainNode.gain.setTargetAtTime(parseFloat(this.value)/100*0.5, audioCtx.currentTime, 0.01);
+  });
+  if(lfoSlider) lfoSlider.addEventListener('input', function(){
+    var v = parseFloat(this.value);
+    document.getElementById('sig-lfo-val').textContent = v===0 ? 'Off' : v.toFixed(1)+' Hz';
+    if(lfoNode) lfoNode.frequency.setTargetAtTime(v||0.001, audioCtx.currentTime, 0.01);
+    if(lfoGain) lfoGain.gain.setTargetAtTime(v>0 ? parseFloat(lfoDepth.value) : 0, audioCtx.currentTime, 0.01);
+  });
+  if(lfoDepth) lfoDepth.addEventListener('input', function(){
+    document.getElementById('sig-lfo-depth-val').textContent = this.value+' Hz';
+    var lfoRate = parseFloat(lfoSlider.value);
+    if(lfoGain && lfoRate>0) lfoGain.gain.setTargetAtTime(parseFloat(this.value), audioCtx.currentTime, 0.01);
+  });
+
+  // Frequency presets
+  document.querySelectorAll('.freq-preset').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = parseFloat(this.dataset.f);
+      if(freqSlider){ freqSlider.value=Math.min(2000,f); document.getElementById('sig-freq-val').textContent=f+' Hz'; }
+      if(oscNode) oscNode.frequency.setTargetAtTime(f, audioCtx.currentTime, 0.02);
+    });
+  });
+
+  // Power button
+  var powerBtn = document.getElementById('sig-power');
+  if(powerBtn) powerBtn.addEventListener('click', function(){
+    if(!sigRunning) startSignal(); else stopSignal();
+  });
+
+  function startSignal(){
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 512;
+    dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+    gainNode = audioCtx.createGain();
+    gainNode.gain.value = parseFloat(ampSlider.value)/100*0.5;
+
+    oscNode = audioCtx.createOscillator();
+    oscNode.type = waveform;
+    oscNode.frequency.value = parseFloat(freqSlider.value);
+
+    lfoNode = audioCtx.createOscillator();
+    lfoNode.type = 'sine';
+    var lfoRate = parseFloat(lfoSlider.value);
+    lfoNode.frequency.value = lfoRate||0.001;
+    lfoGain = audioCtx.createGain();
+    lfoGain.gain.value = lfoRate>0 ? parseFloat(lfoDepth.value) : 0;
+
+    lfoNode.connect(lfoGain);
+    lfoGain.connect(oscNode.frequency);
+    oscNode.connect(gainNode);
+    gainNode.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
+    oscNode.start();
+    lfoNode.start();
+    sigRunning = true;
+    powerBtn.textContent = '⏹ STOP SIGNAL';
+    powerBtn.classList.add('on');
+    drawScopeLoop();
+  }
+
+  function stopSignal(){
+    if(oscNode){ oscNode.stop(); oscNode=null; }
+    if(lfoNode){ lfoNode.stop(); lfoNode=null; }
+    if(audioCtx){ audioCtx.close(); audioCtx=null; }
+    if(drawLoop){ cancelAnimationFrame(drawLoop); drawLoop=null; }
+    sigRunning=false;
+    powerBtn.textContent='▶ START SIGNAL';
+    powerBtn.classList.remove('on');
+    if(sigCtx) sigCtx.clearRect(0,0,sigCanvas.width,sigCanvas.height);
+  }
+
+  function drawScopeLoop(){
+    if(!analyser||!sigCtx) return;
+    analyser.getByteTimeDomainData(dataArray);
+    var W=sigCanvas.width, H=sigCanvas.height;
+    sigCtx.fillStyle='rgba(0,0,0,0.4)';
+    sigCtx.fillRect(0,0,W,H);
+    sigCtx.beginPath();
+    sigCtx.strokeStyle='#7c3aed';
+    sigCtx.lineWidth=2;
+    var sliceW=W/dataArray.length;
+    var x=0;
+    for(var i=0;i<dataArray.length;i++){
+      var v=dataArray[i]/128;
+      var y=v*H/2;
+      if(i===0) sigCtx.moveTo(x,y); else sigCtx.lineTo(x,y);
+      x+=sliceW;
+    }
+    sigCtx.stroke();
+    drawLoop=requestAnimationFrame(drawScopeLoop);
+  }
+
+  // Draw idle scope
+  if(sigCtx){
+    sigCtx.fillStyle='#000';
+    sigCtx.fillRect(0,0,sigCanvas.width,sigCanvas.height);
+    sigCtx.strokeStyle='rgba(124,58,237,0.3)';
+    sigCtx.lineWidth=1;
+    sigCtx.beginPath();
+    sigCtx.moveTo(0,sigCanvas.height/2);
+    sigCtx.lineTo(sigCanvas.width,sigCanvas.height/2);
+    sigCtx.stroke();
+    sigCtx.fillStyle='rgba(255,255,255,0.15)';
+    sigCtx.font='11px JetBrains Mono,monospace';
+    sigCtx.fillText('IDLE — Click START SIGNAL',12,sigCanvas.height/2-8);
+  }
+
+  /* ================================================================
+     CODE DICTIONARY TABLE
+     ================================================================ */
+  function buildDictionary(filter){
+    var tbody=document.getElementById('dict-body');
+    if(!tbody) return;
+    var rows=ELEMENTS.filter(function(el){
+      if(!filter) return true;
+      var f=filter.toLowerCase();
+      return String(el.Z).includes(f)||el.sym.toLowerCase().includes(f)||
+             el.name.toLowerCase().includes(f)||el.meaning.toLowerCase().includes(f)||
+             el.assoc.toLowerCase().includes(f);
+    });
+    tbody.innerHTML=rows.map(function(el){
+      return '<tr>'+
+        '<td class="num">'+el.Z+'</td>'+
+        '<td class="elem">'+el.name+'</td>'+
+        '<td><code style="font-size:.85rem;color:#06b6d4;">'+el.sym+'</code></td>'+
+        '<td class="meaning">'+el.meaning+'</td>'+
+        '<td class="assoc">'+el.assoc+'</td>'+
+        '</tr>';
+    }).join('');
+  }
+  buildDictionary('');
+
+  var dictSearch=document.getElementById('dict-search');
+  if(dictSearch) dictSearch.addEventListener('input',function(){ buildDictionary(this.value); });
+
+  /* ================================================================
+     SIDEBAR ACTIVE STATE ON SCROLL
+     ================================================================ */
+  var sections=document.querySelectorAll('[id]');
+  var sidebarLinks=document.querySelectorAll('.sidebar-link');
+  window.addEventListener('scroll',function(){
+    var current='';
+    sections.forEach(function(s){
+      if(s.getBoundingClientRect().top < 120) current=s.id;
+    });
+    sidebarLinks.forEach(function(l){
+      l.classList.toggle('active', l.getAttribute('href')==='#'+current);
+    });
+  },{passive:true});
+
+})();
+</script>
+</body>
+</html>

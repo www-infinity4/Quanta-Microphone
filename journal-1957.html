@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PROJECT WARP-SYNCH – Los Alamos Technical Memorandum LA-WS-1957-17. Restricted field notes on rotating conductor spacetime experiments. Dr. Harlan Voss, 1957." />
+  <title>LA-WS-1957-17 · PROJECT WARP-SYNCH · RESTRICTED</title>
+  <link rel="stylesheet" href="journal.css" />
+  <style>
+    /* inline supplement: violet glow effect for the "toroid active" hero image */
+    .toroid-hero {
+      width: 100%;
+      max-width: 420px;
+      margin: 1.25rem auto;
+      display: block;
+      position: relative;
+    }
+    .toroid-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* page numbers typed in the margin */
+    .page-num {
+      position: absolute;
+      top: 2rem;
+      right: 2.5rem;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      color: var(--ink-faded);
+    }
+    /* Equation-like lines */
+    .equation {
+      font-family: var(--font-mono);
+      font-size: .82rem;
+      color: var(--ink);
+      border-left: 2px solid var(--paper-dark);
+      padding: .35rem .75rem;
+      margin: .6rem 0;
+      background: rgba(0,0,0,.025);
+    }
+    .eq-label {
+      float: right;
+      font-size: .7rem;
+      color: var(--ink-faded);
+    }
+    /* Tape strip across top */
+    .tape {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 20px;
+      background: rgba(240, 230, 170, 0.55);
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 2px;
+      z-index: 10;
+    }
+    /* Burn/char edge effect on left */
+    .document {
+      border-left: 4px solid #3d2800 !important;
+    }
+    /* Photo caption */
+    .photo-box {
+      border: 1px solid var(--paper-dark);
+      padding: .5rem;
+      margin: 1rem 0;
+      background: rgba(0,0,0,.05);
+      text-align: center;
+      font-family: var(--font-type);
+      font-size: .75rem;
+      color: var(--ink-faded);
+      font-style: italic;
+    }
+    .photo-box .photo-placeholder {
+      width: 100%;
+      height: 130px;
+      background: linear-gradient(135deg, #3d3020 0%, #1a1208 50%, #2d2010 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      letter-spacing: .1em;
+      color: #5a4a30;
+      margin-bottom: .4rem;
+    }
+    /* Tear / fold line */
+    .fold-line {
+      border: none;
+      border-top: 1px dashed rgba(0,0,0,.2);
+      margin: 1.5rem 0;
+    }
+    /* Annotation circle */
+    .anno {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.2em;
+      height: 1.2em;
+      border-radius: 50%;
+      border: 1.5px solid var(--ink-stamp-red);
+      font-family: var(--font-mono);
+      font-size: .68em;
+      color: var(--ink-stamp-red);
+      vertical-align: middle;
+      margin: 0 .15em;
+    }
+    /* Handwritten underlines on key terms */
+    .hw-underline {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-color: rgba(26,47,107,.5);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOP NAV
+     ============================================================ -->
+<nav class="doc-nav">
+  <a href="index.html" class="doc-nav-logo">∞ QUANTA-MIC / INFINITY4</a>
+  <button class="doc-nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <ul class="doc-nav-links">
+    <li><a href="index.html">← Quanta Mic</a></li>
+      <li><a href="resonant-os.html">⚛️ Resonant OS</a></li>
+    <li><a href="index.html#charts">Charts</a></li>
+    <li><a href="index.html#demo">Voice Demo</a></li>
+    <li><a href="index.html#framework">Theory</a></li>
+    <li><a href="index.html#sites">∞ Network</a></li>
+    <li><a href="index.html" class="back-link">⬅ BACK TO BASE</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     PAPER STACK
+     ============================================================ -->
+<div class="paper-stack">
+  <div class="tape" aria-hidden="true"></div>
+
+  <article class="document" role="main" aria-label="Project WARP-SYNCH Technical Memorandum 1957">
+
+    <span class="page-num">Page 1 of 3</span>
+
+    <!-- ---- Stamps ---- -->
+    <div class="stamp-container">
+      <div class="stamp stamp-red">RESTRICTED – EYES ONLY</div>
+      <div class="stamp stamp-blue">LOS ALAMOS SCIENTIFIC LABORATORY</div>
+      <div class="stamp stamp-declassified">DECLASSIFIED [VOID]</div>
+    </div>
+
+    <!-- ---- Classification bar ---- -->
+    <div class="doc-classification-bar">
+      RESTRICTED — DO NOT REPRODUCE — CLASSIFIED DOCUMENT
+    </div>
+
+    <!-- ---- Header ---- -->
+    <header class="doc-header">
+      <div class="doc-agency">Los Alamos Scientific Laboratory · Theoretical Physics Division</div>
+      <div class="doc-title">PROJECT WARP-SYNCH — FIELD NOTES</div>
+      <div class="doc-memo-id">Technical Memorandum &nbsp; LA-WS-1957-17</div>
+    </header>
+
+    <!-- ---- Meta ---- -->
+    <section class="doc-meta" aria-label="Document metadata">
+      <span>DATE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>14 October 1957<br/>
+      <span>AUTHOR:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Dr. Harlan Voss, Theoretical Physics Division<br/>
+      <span>SUBJECT:&nbsp;&nbsp;&nbsp;&nbsp;</span>Observed Anomalies in Rotating Conductor Experiments — "Pipe" Configuration<br/>
+      <span>DOCUMENT NO:</span>LA-WS-1957-17 &nbsp;&nbsp; <span>COPY:</span> <span class="redact" aria-label="[REDACTED]">__3 of 4__</span> of 4<br/>
+      <span>DISTRIBUTION:</span><span class="redact" aria-label="[REDACTED]">_______________________________________</span>
+    </section>
+
+    <!-- ====================================================
+         ABSTRACT
+         ==================================================== -->
+    <h2 class="doc-section-title">Abstract</h2>
+    <div class="doc-body">
+      <p>
+        Preliminary spin tests on an <span class="hw-underline">11.3-inch copper cylinder</span>
+        (internal <span class="redact" aria-label="[REDACTED]">chromium</span>-derived lining,
+        experimental metastable alloy) have produced <span class="bold">repeatable spacetime density
+        modulation</span> at harmonic multiples of <span class="hw-underline">44 Hz</span>.
+      </p>
+      <p>
+        At the <span class="bold">88 Hz threshold</span>, a self-contained plasma toroid forms,
+        exhibiting <span class="hw-underline">gravitational lensing</span> and localized causality
+        displacement. Backward traversal results in macro-scale expansion of the test subject relative
+        to the target era. Forward traversal induces micro-scale compression.
+      </p>
+    </div>
+
+    <div class="doc-warning" role="alert">
+      Forward spin beyond the 88 Hz base risks irreversible compression. Subjects may become
+      <span class="bold">undetectable to the contemporary frame</span>. Retrieval becomes
+      mathematically improbable.
+    </div>
+
+    <!-- ====================================================
+         EXPERIMENTAL SETUP
+         ==================================================== -->
+    <h2 class="doc-section-title">Experimental Setup</h2>
+
+    <div class="doc-list" role="list">
+      <li role="listitem">
+        <span class="bold">Conductor:</span> Copper tube,
+        <span class="redact" aria-label="[REDACTED]">chromium</span>-lined, length precisely
+        <span class="bold">11.3 inches</span> to achieve primary resonance without fracture.
+      </li>
+      <li role="listitem">
+        <span class="bold">Drive:</span> Modified lathe motor, rheostat-controlled. Induction coil
+        bypass installed after Lab 7-B incident.
+      </li>
+      <li role="listitem">
+        <span class="bold">Containment:</span> Cross-polar quad formation of
+        <span class="hw-underline">N52-grade block magnets</span> (four primary anchors).
+        Secondary tether ring of 12 staggered disc magnets to counteract negative-mass interference
+        from the lining.
+      </li>
+      <li role="listitem">
+        <span class="bold">Observation:</span> High-speed cinematography <anno class="anno">1</anno>
+        and magnetic flux probes. Acoustic recording via condenser mic isolated in shielded enclosure.
+      </li>
+    </div>
+
+    <!-- Schematic diagram -->
+    <figure>
+      <div class="diagram" role="img" aria-label="Schematic diagram of warp pipe experimental setup">
+        <pre>
+                    ╔══════════════════════════════════╗
+                    ║   WARP-SYNCH TEST ARRANGEMENT    ║
+                    ║       TOP VIEW (NOT TO SCALE)    ║
+                    ╚══════════════════════════════════╝
+
+    [N52 MAGNET] ────────┐         ┌──────── [N52 MAGNET]
+          (NORTH)        │         │              (SOUTH)
+                         ▼         ▼
+               ┌─────────●─────────●─────────┐
+               │         │         │         │
+               │   ┌─────┴─────────┴─────┐   │
+     [MOTOR]══▶│   │   COPPER TUBE       │   │◀═[RHEOSTAT]
+               │   │   (11.3 in.)        │   │
+               │   │   [CHROMIUM LINING] │   │
+               │   └─────┬─────────┬─────┘   │
+               │         │ TOROID  │         │
+               └─────────●─────────●─────────┘
+                         ▲         ▲
+          (SOUTH)        │         │              (NORTH)
+    [N52 MAGNET] ────────┘         └──────── [N52 MAGNET]
+
+       SECONDARY TETHER RING (12 DISC MAGNETS, STAGGERED 30°):
+             ○  ○  ○  ○  ○  ○  ○  ○  ○  ○  ○  ○
+                    ↑ counteract negative-mass interference
+        </pre>
+        <figcaption>Fig. 1 — Warp-Synch apparatus plan view. 
+          Drafted by <span class="redact" aria-label="[REDACTED]">_________</span>, Oct. 1957.</figcaption>
+      </div>
+    </figure>
+
+    <!-- ====================================================
+         KEY OBSERVATIONS
+         ==================================================== -->
+    <h2 class="doc-section-title">Key Observations — 88 Hz Threshold</h2>
+
+    <div class="margin-note-wrap">
+      <aside class="margin-note" aria-label="Handwritten marginal note">
+        Test #3 — pipe hummed like a damn cartoon. Weight came back the size of a house. We are not ready for this.
+        <span class="signer">— H.V.</span>
+      </aside>
+
+      <ul class="doc-list" role="list">
+        <li role="listitem">
+          <span class="bold">Acoustic Signature:</span> Initial mechanical growl transitions to a
+          hollow, ascending pipe-organ chord. At exact threshold, the sound resolves into a distinct
+          <span class="hw-underline">"ba-doo-doo-doo" waveform</span>
+          <span class="anno">2</span> (audible to all personnel within 50 feet).
+          Frequency signature logged by <span class="redact" aria-label="[REDACTED]">_____________</span>.
+        </li>
+        <li role="listitem">
+          <span class="bold">Plasma Toroid Formation:</span> Copper ionizes into a stable
+          <span class="hw-underline">violet-blue toroidal structure</span>
+          ("forbidden doughnut"). Magnetic streamers from the anchor array lock the vortex in place.
+          Background light exhibits pronounced warping, consistent with extreme refractive index shift.
+        </li>
+        <li role="listitem">
+          <span class="bold">Density Modulation:</span> Test object (brass calibration weight)
+          entering the toroid <span class="bold">expands dramatically</span> when harmonics are tuned
+          downward (perceived as backward displacement). The object appears giant relative to the
+          surrounding environment. Reverse tuning compresses the object to near-microscopic scale.
+          The conductor itself scales in lockstep with the field.
+        </li>
+        <li role="listitem">
+          <span class="bold">Temporal Limit (Backward):</span> Displacement appears capped at or
+          near the date of initial spin activation. Attempts to exceed this
+          "<span class="hw-underline">creation horizon</span>" result in immediate tether slip and
+          toroid collapse.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Frequency equations -->
+    <h2 class="doc-section-title">Harmonic Relationships — Observed Formulae</h2>
+
+    <div class="equation">
+      <span class="eq-label">(Eq. 1)</span>
+      f<sub>n</sub> = 44 · n &nbsp;&nbsp; where n ∈ {1, 2, 3, …}
+    </div>
+    <div class="equation">
+      <span class="eq-label">(Eq. 2)</span>
+      ρ<sub>local</sub>(t) = ρ₀ · e<sup>±κ·(f − 88)</sup> &nbsp;&nbsp; κ = <span class="redact" aria-label="[REDACTED]">0.0___</span> Hz⁻¹
+    </div>
+    <div class="equation">
+      <span class="eq-label">(Eq. 3)</span>
+      Δτ / Δt<sub>lab</sub> ≈ −sgn(Ω) · (f / 88)² &nbsp;&nbsp; [backward: Ω &lt; 0]
+    </div>
+    <p class="doc-body faded" style="font-size:.75rem;">
+      Note: Units intentionally omitted from this copy. See classified addendum LA-WS-1957-17-A
+      (Vault 3, safe <span class="redact" aria-label="[REDACTED]">___</span>).
+    </p>
+
+    <hr class="fold-line" aria-hidden="true" />
+
+    <!-- ====================================================
+         CRITICAL RISKS
+         ==================================================== -->
+    <h2 class="doc-section-title">Critical Risks</h2>
+
+    <div class="margin-note-wrap">
+      <aside class="margin-note" aria-label="Handwritten marginal note">
+        Destroy this page if it leaves the building.
+        <span class="signer">— [Stamp, red ink]</span>
+      </aside>
+
+      <ul class="doc-list" role="list">
+        <li role="listitem">
+          <span class="bold">Tether Slip:</span> Any misalignment of the neodymium anchors
+          (&gt;0.1 mm) or overheating causes the
+          <span class="redact" aria-label="[REDACTED]">chromium</span> lining to destabilize.
+          Result: <span class="bold">catastrophic energy release</span> across multiple density layers.
+          Lab 7-B incident (12 August) remains under investigation.
+          Full incident report: <span class="redact" aria-label="[REDACTED]">_____________________</span>.
+        </li>
+        <li role="listitem">
+          <span class="bold">Forward Spin Hazard:</span> Over-clocking produces extreme compression.
+          Subject may occupy a spatial volume too small for reliable re-expansion upon return.
+          <span class="hw-underline">Visual contact lost</span>; acoustic pings suggest the subject
+          continues to "exist" but at scales incompatible with macroscopic recovery.
+        </li>
+        <li role="listitem">
+          <span class="bold">Causality Note:</span> "God help us if we ever spin it forward in earnest.
+          The pipe does not merely travel time — it folds the local density of reality.
+          <span class="bold">We are not passengers. We become the distortion.</span>"
+          — Dr. Voss, verbal debrief 15 Oct. 1957.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Photo placeholder -->
+    <div class="photo-box" role="figure" aria-label="Photograph from test run">
+      <div class="photo-placeholder">[PHOTOGRAPH — TEST RUN #3 — FILM DAMAGED — PARTIAL RECOVERY]</div>
+      Still from high-speed film. Frame 0:04.812 — Plasma toroid visible. Full reel classified.
+    </div>
+
+    <!-- ====================================================
+         SECOND PAGE
+         ==================================================== -->
+    <hr class="fold-line" aria-hidden="true" />
+    <div style="text-align:right;font-family:var(--font-mono);font-size:.7rem;color:var(--ink-faded);margin-bottom:1rem;">
+      Page 2 of 3 &nbsp;·&nbsp; LA-WS-1957-17
+    </div>
+
+    <h2 class="doc-section-title">Displacement Scale Model</h2>
+
+    <figure>
+      <div class="diagram" role="img" aria-label="Displacement scale model showing forward and backward traversal effects">
+        <pre>
+  BACKWARD TRAVERSAL (downward harmonic tuning)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+         Normal scale                  After traversal
+         ┌──────┐                      ╔══════════════════╗
+         │  Ω   │                      ║                  ║
+         │ obj  │     ──────────▶      ║    Ω   obj       ║  ← GIANT
+         └──────┘                      ║    (expanded)    ║
+          ~1 kg brass weight           ╚══════════════════╝
+                                          ~scale of a house
+
+  FORWARD TRAVERSAL (upward harmonic over-clocking)
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+         Normal scale                  After traversal
+         ┌──────┐                      .
+         │  Ω   │     ──────────▶      · ← NEAR INVISIBLE
+         │ obj  │                      (compressed ~2mm)
+         └──────┘
+          ~1 kg brass weight           Retrieval: IMPROBABLE
+        </pre>
+        <figcaption>Fig. 2 — Comparative scale diagram. Backward = macro-expansion. Forward = micro-compression.</figcaption>
+      </div>
+    </figure>
+
+    <!-- ====================================================
+         CREATION HORIZON THEORY
+         ==================================================== -->
+    <h2 class="doc-section-title">Creation Horizon Theory</h2>
+    <div class="doc-body">
+      <p>
+        All backward traversal attempts are bounded by a singular event we designate the
+        <span class="hw-underline">"creation horizon"</span> — the moment the device was first
+        activated and the chromium lining underwent its initial phase transition. Prior to this
+        event, the toroid field has no anchor point; tether geometry collapses immediately.
+      </p>
+      <p>
+        We posit this mirrors the observer-dependence problem in quantum mechanics: the instrument
+        cannot precede its own observation. The pipe <span class="bold">cannot travel before
+        it was built</span>.
+      </p>
+      <p>
+        Corollary: forward traversal is theoretically unbounded, but practically terminated by
+        compression-induced non-retrievability. A subject compressed below ~10⁻⁴ m³ cannot
+        be re-expanded by the tether array under current power constraints.
+      </p>
+    </div>
+
+    <!-- ====================================================
+         RECOMMENDATION
+         ==================================================== -->
+    <h2 class="doc-section-title">Recommendation</h2>
+    <div class="doc-body">
+      <p>
+        All further tests <span class="bold underline">SUSPENDED</span> pending review by the
+        <span class="redact" aria-label="[REDACTED]">_____________</span> Director.
+        Prototypes to be secured in <span class="bold">Vault 3</span>.
+        Any civilian reproduction is expressly forbidden and will be treated as a
+        <span class="hw-underline">national security breach</span>.
+      </p>
+    </div>
+
+    <div class="doc-warning" role="alert">
+      NOTICE: This memorandum is subject to Executive Order
+      <span class="redact" aria-label="[REDACTED]">_______</span>
+      and the Atomic Energy Act of 1946. Unauthorized disclosure carries penalties under
+      18 U.S.C. §<span class="redact" aria-label="[REDACTED]">____</span>.
+      Destroy all copies upon reading unless directed otherwise by
+      <span class="redact" aria-label="[REDACTED]">_______________</span>.
+    </div>
+
+    <!-- ====================================================
+         MARGINALIA FULL QUOTES
+         ==================================================== -->
+    <h2 class="doc-section-title">Annotations — Recovered (Partial)</h2>
+    <div style="font-family:var(--font-hand);font-size:1.05rem;line-height:1.6;color:var(--ink-blue);padding:.75rem 1rem;border-left:3px solid rgba(26,47,107,.3);background:rgba(26,47,107,.04);margin:.75rem 0;">
+      "Test #3 — pipe hummed like a damn cartoon. Weight came back the size of a house.
+      We are not ready for this." <span style="font-size:.85rem;opacity:.7;">— H.V.</span>
+    </div>
+    <div style="font-family:var(--font-hand);font-size:1rem;line-height:1.6;color:var(--ink-blue);padding:.75rem 1rem;border-left:3px solid rgba(26,47,107,.3);background:rgba(26,47,107,.04);margin:.75rem 0;">
+      "Forward run #1 was a mistake we almost can't account for.
+      The acoustic signature resolved into that Mario sound <span class="redact" aria-label="[REDACTED]">____</span> called it.
+      Laughed. Then the weight didn't come back." <span style="font-size:.85rem;opacity:.7;">— H.V., undated</span>
+    </div>
+    <div style="font-family:var(--font-hand);font-size:1rem;line-height:1.6;color:var(--ink-blue);padding:.75rem 1rem;border-left:3px solid rgba(26,47,107,.3);background:rgba(26,47,107,.04);margin:.75rem 0;">
+      <span style="font-family:var(--font-mono);font-size:.8rem;background:var(--ink-stamp-red);color:white;padding:.15rem .45rem;border-radius:2px;margin-right:.5rem;letter-spacing:.1em;">DESTROY THIS PAGE IF IT LEAVES THE BUILDING.</span>
+    </div>
+
+    <!-- ====================================================
+         END OF MEMO
+         ==================================================== -->
+    <h2 class="doc-section-title" style="text-align:center;">[END OF MEMO]</h2>
+
+    <!-- ---- Document footer ---- -->
+    <footer class="doc-footer">
+      <div>
+        LA-WS-1957-17 &nbsp;·&nbsp; RESTRICTED – EYES ONLY<br/>
+        Los Alamos Scientific Laboratory · Theoretical Physics Division
+      </div>
+      <div style="text-align:right;">
+        Declassification Status: <span class="bold">NEVER.</span><br/>
+        Recovered from burned filing cabinet, 1992.<br/>
+        <span class="redact" aria-label="[REDACTED]">_____________________</span>
+      </div>
+    </footer>
+
+  </article>
+</div>
+
+<!-- ============================================================
+     RECOVERY STRIP
+     ============================================================ -->
+<div class="recovery-strip" role="note">
+  ⚠ &nbsp; THIS COPY WAS RECOVERED FROM A BURNED FILING CABINET, VAULT 3-B, 1992 &nbsp; ⚠<br/>
+  CONDITION: PARTIAL BURN DAMAGE · SOME PAGES UNRECOVERABLE · CHAIN OF CUSTODY: UNKNOWN<br/>
+  ∞ INFINITY4 ARCHIVE — FOR RESEARCH AND CREATIVE REFERENCE ONLY
+</div>
+
+<!-- ============================================================
+     NAVIGATION SCRIPT (hamburger)
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+  var toggle = document.querySelector('.doc-nav-toggle');
+  var links  = document.querySelector('.doc-nav-links');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.textContent = open ? '✕' : '☰';
+  });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

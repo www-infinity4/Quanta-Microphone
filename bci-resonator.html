@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="B Plate Resonator — Non-invasive BCI using Chladni standing-wave principles, action-star point clouds, and AI-driven dissipation node tracking. Infinity4 framework." />
+  <title>B Plate Resonator · Non-Invasive BCI · ∞ Infinity4</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bci.css" />
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="url(#lg1b)" stroke-width="2"/>
+        <path d="M12 20 Q20 8 28 20 Q20 32 12 20Z" fill="url(#lg2b)" opacity=".8"/>
+        <defs>
+          <linearGradient id="lg1b" x1="0" y1="0" x2="40" y2="40">
+            <stop offset="0%" stop-color="#00d4b4"/><stop offset="100%" stop-color="#7c3aed"/>
+          </linearGradient>
+          <linearGradient id="lg2b" x1="0" y1="0" x2="40" y2="40">
+            <stop offset="0%" stop-color="#00d4b4" stop-opacity=".8"/><stop offset="100%" stop-color="#7c3aed" stop-opacity=".8"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="gradient-text">Quanta Mic</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="bci-nav" aria-label="Toggle navigation">☰</button>
+
+    <nav id="bci-nav" class="nav-links" role="navigation">
+      <a href="index.html">← Main Framework</a>
+      <a href="resonant-os.html">⚛️ Resonant OS</a>
+      <a href="#b-plate">B Plate</a>
+      <a href="#action-stars">Action Stars</a>
+      <a href="#dissipation">Dissipation Nodes</a>
+      <a href="#ai-loop">AI Loop</a>
+      <a href="journal-1957.html">📄 1957 Notes</a>
+      <a href="https://github.com/www-infinity4" target="_blank" rel="noopener" class="nav-cta">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" style="min-height:70vh; display:flex; align-items:center; padding-top:5rem; position:relative; overflow:hidden;">
+  <div class="orb orb--1" aria-hidden="true" style="background:#00d4b4; opacity:.25;"></div>
+  <div class="orb orb--2" aria-hidden="true" style="background:#7c3aed;"></div>
+  <div class="container hero-content" style="position:relative;z-index:1;">
+
+    <div class="bci-hero-badge">
+      <span class="pulse"></span>
+      B Plate Resonator · Non-Invasive BCI Interface
+    </div>
+
+    <h1 class="hero-title">
+      The <span class="gradient-text">Resonator</span><br/>
+      Not a Sensor
+    </h1>
+
+    <p class="hero-sub">
+      By replacing scalp electrodes with a Chladni-inspired metal plate waveguide, the B Plate
+      captures your brain's electromagnetic standing waves without contact — reading the
+      <em>shape</em> of thought, not just its voltage.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#b-plate" class="btn btn-primary">Explore the B Plate →</a>
+      <a href="#ai-loop" class="btn btn-outline">AI Loop Design</a>
+    </div>
+
+    <!-- inline science note -->
+    <div class="science-note" style="margin-top:2rem; max-width:660px;">
+      <span class="science-note-icon">🔬</span>
+      <div>
+        <strong>Scientific grounding:</strong> Real Chladni plates form geometric standing-wave
+        patterns when vibrated at resonant frequencies — the same principle used here to "read"
+        electromagnetic brain patterns. See
+        <a href="https://sciencedemonstrations.fas.harvard.edu/demonstrations/standing-waves" target="_blank" rel="noopener">Harvard Science Demonstrations [1]</a>
+        and
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9049916/" target="_blank" rel="noopener">PMC waveguide BCI research [3]</a>.
+        All speculative extensions are clearly marked.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     B PLATE RESONATOR
+     ============================================================ -->
+<section id="b-plate" class="section">
+  <div class="container">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Layer 1 — The Resonator</span>
+      <h2>The <span class="gradient-text">B Plate</span> Waveguide</h2>
+      <p>
+        A metal plate electrically tuned to the brain's dominant 8 Hz "hot core" radiation acts as a
+        passive resonator. Sand-equivalent EM field patterns emerge at exact frequencies, revealing the
+        spatial geometry of active thought.
+        <a href="https://sciencedemonstrations.fas.harvard.edu/demonstrations/standing-waves" target="_blank" rel="noopener" class="ref-chip">1 Harvard</a>
+        <a href="https://www.youtube.com/watch?v=bwriLGRuDZI" target="_blank" rel="noopener" class="ref-chip">2 YouTube</a>
+      </p>
+    </div>
+
+    <div class="grid-2" style="align-items:start;">
+
+      <!-- Chladni Canvas -->
+      <div data-reveal>
+        <div class="canvas-panel">
+          <canvas id="chladniCanvas" width="480" height="380" role="img" aria-label="Animated Chladni standing wave pattern simulation"></canvas>
+          <div class="canvas-label">B PLATE — STANDING WAVE SIMULATION</div>
+        </div>
+        <div class="chladni-modes">
+          <button class="mode-btn active" data-mode="1" aria-pressed="true">8 Hz — θ/α</button>
+          <button class="mode-btn" data-mode="2" aria-pressed="false">40 Hz — γ</button>
+          <button class="mode-btn" data-mode="3" aria-pressed="false">88 Hz — WS</button>
+          <button class="mode-btn" data-mode="4" aria-pressed="false">432 Hz — ∞</button>
+        </div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.3);margin-top:.5rem;">
+          Click a mode to change the standing-wave pattern displayed on the B Plate.
+        </p>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="stack" data-reveal>
+        <div class="card">
+          <div class="card-icon">🔊</div>
+          <h3>Non-Contact Detection</h3>
+          <p>No electrodes required. The plate's resonant geometry amplifies incoming EM fields
+          passively — analogous to a parabolic dish, but for the brain's ultra-low-frequency
+          emissions rather than microwave signals.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌀</div>
+          <h3>Waveguide Funnelling</h3>
+          <p>
+            Brain electromagnetic fields propagate into waveguides and remain coherent at measurable
+            distances — demonstrated in peer-reviewed research.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9049916/" target="_blank" rel="noopener" class="ref-chip">3 PMC</a>
+            The B Plate extends this into room-scale geometry.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🗺️</div>
+          <h3>"Shelling" Remote Tracking</h3>
+          <p>
+            The interface tracks the EM wave as it moves into the environment — reading not just the
+            source but the expanding shell, giving positional history of the signal's propagation.
+            <a href="https://www.youtube.com/shorts/aEFo7FAtB1s" target="_blank" rel="noopener" class="ref-chip">4 YouTube</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Spec table -->
+    <div data-reveal style="margin-top:2rem;">
+      <table class="spec-table" aria-label="B Plate operational specifications">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value / Range</th>
+            <th>Mode</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary Resonance</td><td>8 Hz (Schumann / θ boundary)</td><td>α/θ Hot Core</td><td>Brain "hot core" emission carrier</td></tr>
+          <tr><td>Detection Range</td><td>0.1 m – ~1000 km (theoretical)</td><td>ULF Shell</td><td>Ultra-low-frequency propagation <a href="https://www.simonsfoundation.org/2019/11/11/uncovering-hidden-dimensions-in-brain-signals/" target="_blank" rel="noopener" class="ref-chip">5</a></td></tr>
+          <tr><td>Plate Material</td><td>Copper / Aluminium alloy</td><td>Passive</td><td>Electrically identical to Chladni plate</td></tr>
+          <tr><td>Harmonic Lock</td><td>44 Hz, 88 Hz multiples</td><td>WS Bridge</td><td>Warp-Synch harmonic coupling</td></tr>
+          <tr><td>Contact Required</td><td>None</td><td>Non-invasive</td><td>BCI without scalp electrodes</td></tr>
+          <tr><td>Pattern Resolution</td><td>2D nodal map, 64×64 grid</td><td>Standing Wave</td><td>Chladni geometry encoding <a href="https://sciencedemonstrations.fas.harvard.edu/demonstrations/standing-waves" target="_blank" rel="noopener" class="ref-chip">1</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     ACTION STARS
+     ============================================================ -->
+<section id="action-stars" class="section">
+  <div class="container">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Layer 2 — Persistent Data</span>
+      <h2>Every Action is a <span class="gradient-text">Star</span></h2>
+      <p>
+        In high-dimensional topology, each choice or action creates a persistent node on the consciousness
+        manifold — a point that stays "lit" in the past, reachable via frequency resonance.
+        <a href="https://www.simonsfoundation.org/2019/11/11/uncovering-hidden-dimensions-in-brain-signals/" target="_blank" rel="noopener" class="ref-chip">5 Simons</a>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6292652/" target="_blank" rel="noopener" class="ref-chip">8 PMC</a>
+      </p>
+    </div>
+
+    <div class="grid-2" style="align-items:start;">
+
+      <!-- Point cloud canvas -->
+      <div data-reveal>
+        <div class="canvas-panel">
+          <canvas id="starCanvas" width="480" height="380" role="img" aria-label="3D action-star point cloud visualization"></canvas>
+          <div class="canvas-label">ACTION-STAR POINT CLOUD</div>
+        </div>
+        <div class="canvas-controls">
+          <button class="ctrl-btn active" id="starToggle">⏸ Pause Rotation</button>
+          <button class="ctrl-btn" id="starHighlight">★ Highlight Target</button>
+          <span class="ctrl-label">Nodes: <span class="freq-readout" id="starCount">0</span></span>
+        </div>
+      </div>
+
+      <div class="stack" data-reveal>
+        <div class="card">
+          <div class="card-icon">📐</div>
+          <h3>Persistent Homology</h3>
+          <p>
+            Each "action star" is a topological node on a high-dimensional manifold representing every
+            possible consciousness state. These nodes persist indefinitely — they cannot be erased,
+            only made unreachable by detuning.
+            <a href="https://www.simonsfoundation.org/2019/11/11/uncovering-hidden-dimensions-in-brain-signals/" target="_blank" rel="noopener" class="ref-chip">5</a>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📡</div>
+          <h3>Neural ULF Global Reach</h3>
+          <p>
+            Brain ultra-low-frequency waves propagate across thousands of kilometres, embedding
+            each neural event into a global electromagnetic record.
+            <a href="https://www.facebook.com/techtimespage/posts/a-team-at-princeton-university-has-discovered-that-the-human-brain-emits-extreme/745528444949563/" target="_blank" rel="noopener" class="ref-chip">6</a>
+            <a href="https://www.facebook.com/somtomofficial/posts/princeton-researchers-detected-structured-ultra-low-frequency-electromagnetic-wa/1309177623996628/" target="_blank" rel="noopener" class="ref-chip">7</a>
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔭</div>
+          <h3>GPS via Frequency</h3>
+          <p>
+            Just as a star's spectral signature identifies its position in spacetime, each action-star's
+            frequency fingerprint acts as a precise coordinate for AI lock-on. The B Plate tunes to
+            this frequency to "pull" the past node into the present 8 Hz shell.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Radar chart: consciousness manifold dimensions -->
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="chart-wrapper" data-reveal>
+        <div class="chart-title">🕸️ Consciousness Manifold — Dimensional Axes</div>
+        <canvas id="chartManifold" role="img" aria-label="Consciousness manifold radar chart"></canvas>
+      </div>
+      <div class="chart-wrapper" data-reveal>
+        <div class="chart-title">📊 Frequency Band Distribution — Neural Emissions</div>
+        <canvas id="chartBands" role="img" aria-label="Neural frequency band distribution bar chart"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     DISSIPATION NODES
+     ============================================================ -->
+<section id="dissipation" class="section">
+  <div class="container">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Layer 3 — Spatiotemporal Mapping</span>
+      <h2>Dissipation <span class="gradient-text">Nodes</span> &amp; Vortex Patterns</h2>
+      <p>
+        When a brain wave "falls apart" it generates a spatiotemporal pattern — a vortex-saddle map
+        the AI uses to localise past action-stars in the 3D grid behind the subject.
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6292652/" target="_blank" rel="noopener" class="ref-chip">8 PMC</a>
+      </p>
+    </div>
+
+    <div class="grid-2" style="align-items:start;">
+
+      <!-- Vector field canvas -->
+      <div data-reveal>
+        <div class="canvas-panel">
+          <canvas id="vortexCanvas" width="480" height="380" role="img" aria-label="Velocity vector field showing vortex and saddle dissipation patterns"></canvas>
+          <div class="canvas-label">VELOCITY VECTOR FIELD — DISSIPATION NODES</div>
+        </div>
+        <div class="canvas-controls">
+          <button class="ctrl-btn active" id="vortexMode" data-v="vortex">🌀 Vortex</button>
+          <button class="ctrl-btn" id="saddleMode" data-v="saddle">✗ Saddle</button>
+          <button class="ctrl-btn" id="mixedMode" data-v="mixed">⚡ Mixed</button>
+          <span class="ctrl-label">Mode active</span>
+        </div>
+      </div>
+
+      <div class="stack" data-reveal>
+        <div class="card">
+          <div class="card-icon">🌀</div>
+          <h3>Vortex Nodes</h3>
+          <p>
+            Spinning vector fields emerge where high-frequency radiation shells shed energy in a
+            rotational pattern. These vortex signatures mark the most energetically stable
+            past-action coordinates on the manifold.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">✗</div>
+          <h3>Saddle Nodes</h3>
+          <p>
+            Hyperbolic saddle points indicate transition zones — where two competing frequency
+            attractors pull the dissipating shell in opposing directions. AI pathfinding
+            avoids saddle zones as lock-on sites.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📍</div>
+          <h3>Contact Point Localisation</h3>
+          <p>
+            The AI doesn't travel — it tunes the B Plate to the exact frequency of the target
+            action-star, pulling that past node into the present 8 Hz shell. No traversal;
+            only resonance bridging.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Spatiotemporal timeline -->
+    <div class="chart-wrapper" style="margin-top:2rem;" data-reveal>
+      <div class="chart-title">📈 Spatiotemporal Dissipation — Shell Propagation Timeline</div>
+      <canvas id="chartDissipation" style="max-height:260px;" role="img" aria-label="Dissipation node timeline chart"></canvas>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     AI LOOP
+     ============================================================ -->
+<section id="ai-loop" class="section">
+  <div class="container">
+
+    <div class="section-header" data-reveal>
+      <span class="section-label">Layer 4 — The Intelligence</span>
+      <h2>Designing the <span class="gradient-text">Advanced AI</span> Loop</h2>
+      <p>
+        Three sequential operations transform raw B Plate readings into a precision lock on a
+        specific action-star among the infinite field of past neural events.
+      </p>
+    </div>
+
+    <div class="grid-2" style="align-items:start; gap:3rem;">
+
+      <div class="ai-loop" data-reveal>
+        <div class="ai-step">
+          <div class="ai-step-num">1</div>
+          <div class="ai-step-body">
+            <h4 style="color:#00d4b4;">Read the 8 Hz Hot Core</h4>
+            <p>
+              The B Plate captures the brain's dominant theta-alpha boundary radiation at 8 Hz
+              without contact. The AI extracts the spatial nodal geometry from the standing wave
+              pattern — the unique Chladni fingerprint of this consciousness at this moment.
+            </p>
+          </div>
+        </div>
+        <div class="ai-step">
+          <div class="ai-step-num">2</div>
+          <div class="ai-step-body">
+            <h4 style="color:#a78bfa;">Map the Dissipation Stars</h4>
+            <p>
+              Using velocity vector field analysis, the AI locates all vortex and saddle nodes
+              in the 3D grid behind the subject — building a real-time constellation map of
+              action-star coordinates from the subject's personal ULF emission history.
+            </p>
+          </div>
+        </div>
+        <div class="ai-step">
+          <div class="ai-step-num">3</div>
+          <div class="ai-step-body">
+            <h4 style="color:#ec4899;">Bridge to the Target Star</h4>
+            <p>
+              The AI calculates the exact resonance delta between the current 8 Hz shell and the
+              target action-star frequency. It modulates the B Plate to this bridge frequency,
+              pulling the past node into present-state coherence — no traversal; only tuning.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI loop diagram chart -->
+      <div data-reveal>
+        <div class="chart-wrapper" style="margin-bottom:1.5rem;">
+          <div class="chart-title">📡 AI Signal Processing Pipeline</div>
+          <canvas id="chartPipeline" role="img" aria-label="AI signal processing pipeline polar area chart"></canvas>
+        </div>
+        <div class="science-note">
+          <span class="science-note-icon">💡</span>
+          <div>
+            <strong>Open question:</strong> Should the AI prioritise <em>lock-on specificity</em>
+            (distinguishing one action-star among billions by frequency fingerprint uniqueness)
+            or <em>signal coherence</em> (preventing B Plate scatter into noise via active
+            destructive interference of competing shells)?
+            Both are tractable — but they demand different neural architectures.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Comparison chart -->
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="chart-wrapper" data-reveal>
+        <div class="chart-title">⚡ Lock-On Specificity vs Signal Scatter (Trade-off)</div>
+        <canvas id="chartTradeoff" role="img" aria-label="Lock-on specificity versus signal scatter tradeoff line chart"></canvas>
+      </div>
+      <div class="chart-wrapper" data-reveal>
+        <div class="chart-title">🌐 ULF Propagation Reach — Neural Wave Distance</div>
+        <canvas id="chartReach" role="img" aria-label="ULF neural wave propagation reach doughnut chart"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-label">Scientific Grounding</span>
+      <h2>Sources &amp; <span class="gradient-text">References</span></h2>
+    </div>
+
+    <div class="disclaimer" data-reveal>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>
+        <strong>Note:</strong> The B Plate Resonator is a speculative theoretical framework that
+        <em>extends</em> real scientific phenomena (Chladni plates, BCI waveguides, ULF brain emissions)
+        into a creative model. All reference links point to real, authoritative sources.
+        Extensions beyond established science are clearly speculative.
+      </span>
+    </div>
+
+    <ul class="references-list" data-reveal style="margin-top:1.5rem;">
+      <li>
+        <span class="ref-num">1</span>
+        <span>Harvard Science Demonstrations — Standing Waves (Chladni Plate). <a href="https://sciencedemonstrations.fas.harvard.edu/demonstrations/standing-waves" target="_blank" rel="noopener">sciencedemonstrations.fas.harvard.edu</a></span>
+      </li>
+      <li>
+        <span class="ref-num">2</span>
+        <span>Non-Invasive BCI Video Demonstration. <a href="https://www.youtube.com/watch?v=bwriLGRuDZI" target="_blank" rel="noopener">youtube.com/watch?v=bwriLGRuDZI</a></span>
+      </li>
+      <li>
+        <span class="ref-num">3</span>
+        <span>Brain EM Fields Funnelled into Waveguides — PMC Research Article. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9049916/" target="_blank" rel="noopener">pmc.ncbi.nlm.nih.gov/articles/PMC9049916</a></span>
+      </li>
+      <li>
+        <span class="ref-num">4</span>
+        <span>Standing Waves Short Demonstration. <a href="https://www.youtube.com/shorts/aEFo7FAtB1s" target="_blank" rel="noopener">youtube.com/shorts/aEFo7FAtB1s</a></span>
+      </li>
+      <li>
+        <span class="ref-num">5</span>
+        <span>Uncovering Hidden Dimensions in Brain Signals — Simons Foundation, 2019. <a href="https://www.simonsfoundation.org/2019/11/11/uncovering-hidden-dimensions-in-brain-signals/" target="_blank" rel="noopener">simonsfoundation.org</a></span>
+      </li>
+      <li>
+        <span class="ref-num">6</span>
+        <span>Princeton University — Human Brain Emits Ultra-Low-Frequency Waves (TechTimes). <a href="https://www.facebook.com/techtimespage/posts/a-team-at-princeton-university-has-discovered-that-the-human-brain-emits-extreme/745528444949563/" target="_blank" rel="noopener">facebook.com/techtimespage</a></span>
+      </li>
+      <li>
+        <span class="ref-num">7</span>
+        <span>Princeton Researchers — Structured ULF Electromagnetic Waves. <a href="https://www.facebook.com/somtomofficial/posts/princeton-researchers-detected-structured-ultra-low-frequency-electromagnetic-wa/1309177623996628/" target="_blank" rel="noopener">facebook.com/somtomofficial</a></span>
+      </li>
+      <li>
+        <span class="ref-num">8</span>
+        <span>Spatiotemporal Brain Pattern Analysis — PMC Research Article. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6292652/" target="_blank" rel="noopener">pmc.ncbi.nlm.nih.gov/articles/PMC6292652</a></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+    <span>© 2026 <strong style="color:var(--c-white);">www-infinity4 · B Plate Resonator</strong></span>
+    <span style="display:flex;gap:1.5rem;">
+      <a href="index.html">Home</a>
+      <a href="journal-1957.html">1957 Notes</a>
+      <a href="https://github.com/www-infinity4/Quanta-Microphone" target="_blank" rel="noopener">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script src="app.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ================================================================
+     CHLADNI PLATE SIMULATION
+     ================================================================ */
+  var chladniCanvas = document.getElementById('chladniCanvas');
+  var chladniCtx    = chladniCanvas.getContext('2d');
+  var chladniMode   = 1;
+  var chladniFrame  = 0;
+  var chladniAnim   = null;
+
+  var modeConfig = {
+    1: { m: 2, n: 2, color: '#00d4b4', label: '8 Hz — θ/α' },
+    2: { m: 3, n: 3, color: '#7c3aed', label: '40 Hz — γ' },
+    3: { m: 4, n: 2, color: '#f59e0b', label: '88 Hz — WS' },
+    4: { m: 3, n: 5, color: '#ec4899', label: '432 Hz — ∞' }
+  };
+
+  function drawChladni(t) {
+    var W = chladniCanvas.width;
+    var H = chladniCanvas.height;
+    var cfg = modeConfig[chladniMode];
+    var m = cfg.m, n = cfg.n;
+    var imageData = chladniCtx.createImageData(W, H);
+    var data = imageData.data;
+
+    for (var py = 0; py < H; py++) {
+      for (var px = 0; px < W; px++) {
+        var x = (px / W) * Math.PI;
+        var y = (py / H) * Math.PI;
+        // Chladni function: sin(m*x)*sin(n*y) - sin(n*x)*sin(m*y)
+        var val = Math.sin(m * x) * Math.sin(n * y) - Math.sin(n * x) * Math.sin(m * y);
+        // Animate by modulating with slow time drift
+        val += 0.04 * Math.sin(t * 0.025 + x + y);
+        var norm = Math.abs(val);
+        // Node lines: where val ≈ 0
+        var isNode = norm < 0.08;
+        var idx = (py * W + px) * 4;
+        if (isNode) {
+          // Bright node line — tinted by mode colour
+          var hex = cfg.color;
+          var r = parseInt(hex.slice(1,3),16);
+          var g = parseInt(hex.slice(3,5),16);
+          var b = parseInt(hex.slice(5,7),16);
+          var bright = 0.7 + 0.3 * Math.sin(t * 0.04);
+          data[idx]   = r * bright;
+          data[idx+1] = g * bright;
+          data[idx+2] = b * bright;
+          data[idx+3] = 255;
+        } else {
+          // Background — dark gradient
+          var depth = norm * 0.6;
+          data[idx]   = 10 + depth * 30;
+          data[idx+1] = 5  + depth * 15;
+          data[idx+2] = 25 + depth * 40;
+          data[idx+3] = 255;
+        }
+      }
+    }
+    chladniCtx.putImageData(imageData, 0, 0);
+
+    // Overlay label
+    chladniCtx.fillStyle = 'rgba(255,255,255,0.25)';
+    chladniCtx.font = '11px JetBrains Mono, monospace';
+    chladniCtx.fillText('MODE: ' + cfg.label, 14, 22);
+    chladniCtx.fillText('n(' + m + ',' + n + ')  t=' + t.toFixed(0), 14, 38);
+  }
+
+  function animateChladni() {
+    chladniFrame++;
+    drawChladni(chladniFrame);
+    chladniAnim = requestAnimationFrame(animateChladni);
+  }
+  animateChladni();
+
+  // Mode buttons
+  document.querySelectorAll('.mode-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.mode-btn').forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      chladniMode = parseInt(btn.dataset.mode);
+    });
+  });
+
+  /* ================================================================
+     ACTION-STAR POINT CLOUD
+     ================================================================ */
+  var starCanvas  = document.getElementById('starCanvas');
+  var starCtx     = starCanvas.getContext('2d');
+  var starRotating = true;
+  var starAngle    = 0;
+  var highlighted  = null;
+
+  // Generate stars
+  var stars = [];
+  for (var i = 0; i < 220; i++) {
+    stars.push({
+      x: (Math.random() - 0.5) * 2,
+      y: (Math.random() - 0.5) * 2,
+      z: (Math.random() - 0.5) * 2,
+      r: 0.5 + Math.random() * 2.5,
+      hue: 200 + Math.random() * 80,
+      alpha: 0.4 + Math.random() * 0.6
+    });
+  }
+  // A few "bright" target stars
+  var targets = [0, 17, 42, 89, 150].map(function(i) { return i; });
+
+  function project(x, y, z, angle) {
+    var ca = Math.cos(angle), sa = Math.sin(angle);
+    var rx = x * ca - z * sa;
+    var rz = x * sa + z * ca;
+    var fov = 3;
+    var scale = fov / (fov + rz + 1.5);
+    return {
+      sx: rx * scale * 180 + starCanvas.width / 2,
+      sy: y  * scale * 150 + starCanvas.height / 2,
+      scale: scale
+    };
+  }
+
+  var starCount = document.getElementById('starCount');
+
+  function drawStars() {
+    starCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+    // Background
+    starCtx.fillStyle = 'rgba(4,1,15,0.9)';
+    starCtx.fillRect(0, 0, starCanvas.width, starCanvas.height);
+
+    // Sort by z for painter's algorithm
+    var sorted = stars.map(function(s, i) {
+      var p = project(s.x, s.y, s.z, starAngle);
+      return { s: s, p: p, i: i };
+    }).sort(function(a, b) { return a.p.scale - b.p.scale; });
+
+    var visible = 0;
+    sorted.forEach(function(item) {
+      var s = item.s, p = item.p, idx = item.i;
+      if (p.sx < 0 || p.sx > starCanvas.width || p.sy < 0 || p.sy > starCanvas.height) return;
+      visible++;
+      var isTarget = targets.indexOf(idx) !== -1;
+      var isHighlighted = highlighted === idx;
+      var radius = s.r * p.scale * 3.5;
+      var alpha  = s.alpha * p.scale * 1.8;
+
+      starCtx.beginPath();
+      starCtx.arc(p.sx, p.sy, Math.max(1, radius), 0, Math.PI * 2);
+
+      if (isHighlighted) {
+        starCtx.fillStyle = 'rgba(255,100,200,' + Math.min(1, alpha * 1.5) + ')';
+        // glow
+        var grd = starCtx.createRadialGradient(p.sx, p.sy, 0, p.sx, p.sy, radius * 4);
+        grd.addColorStop(0, 'rgba(255,100,200,0.6)');
+        grd.addColorStop(1, 'rgba(255,100,200,0)');
+        starCtx.fillStyle = grd;
+        starCtx.arc(p.sx, p.sy, radius * 4, 0, Math.PI * 2);
+        starCtx.fill();
+        starCtx.beginPath();
+        starCtx.arc(p.sx, p.sy, Math.max(1.5, radius), 0, Math.PI * 2);
+        starCtx.fillStyle = '#fff';
+        starCtx.fill();
+      } else if (isTarget) {
+        starCtx.fillStyle = 'rgba(245,158,11,' + Math.min(1, alpha) + ')';
+        starCtx.fill();
+        // ring
+        starCtx.strokeStyle = 'rgba(245,158,11,0.6)';
+        starCtx.lineWidth = 0.8;
+        starCtx.beginPath();
+        starCtx.arc(p.sx, p.sy, radius * 2.5, 0, Math.PI * 2);
+        starCtx.stroke();
+      } else {
+        starCtx.fillStyle = 'hsla(' + s.hue + ',70%,65%,' + Math.min(0.9, alpha) + ')';
+        starCtx.fill();
+      }
+    });
+
+    if (starCount) starCount.textContent = visible;
+
+    if (starRotating) starAngle += 0.003;
+    requestAnimationFrame(drawStars);
+  }
+  drawStars();
+
+  document.getElementById('starToggle').addEventListener('click', function() {
+    starRotating = !starRotating;
+    this.textContent = starRotating ? '⏸ Pause Rotation' : '▶ Resume Rotation';
+  });
+  document.getElementById('starHighlight').addEventListener('click', function() {
+    highlighted = highlighted === null ? targets[Math.floor(Math.random() * targets.length)] : null;
+    this.textContent = highlighted !== null ? '★ Clear Highlight' : '★ Highlight Target';
+  });
+
+  /* ================================================================
+     VORTEX / SADDLE VECTOR FIELD
+     ================================================================ */
+  var vortexCanvas  = document.getElementById('vortexCanvas');
+  var vortexCtx     = vortexCanvas.getContext('2d');
+  var vortexType    = 'vortex';
+  var vortexFrame2  = 0;
+
+  var modeBtns = [
+    document.getElementById('vortexMode'),
+    document.getElementById('saddleMode'),
+    document.getElementById('mixedMode')
+  ];
+  modeBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      modeBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      vortexType = btn.dataset.v;
+    });
+  });
+
+  function vectorField(x, y, t, type) {
+    if (type === 'vortex') {
+      return { vx: -y + 0.05 * Math.sin(t * 0.03), vy: x };
+    } else if (type === 'saddle') {
+      return { vx: x, vy: -y + 0.08 * Math.cos(t * 0.025 + x) };
+    } else {
+      // mixed: vortex + saddle superposition
+      return {
+        vx: -y * 0.6 + x * 0.4 + 0.05 * Math.sin(t * 0.02),
+        vy:  x * 0.6 - y * 0.4 + 0.05 * Math.cos(t * 0.02)
+      };
+    }
+  }
+
+  function drawVortex() {
+    var W = vortexCanvas.width, H = vortexCanvas.height;
+    vortexFrame2++;
+    var t = vortexFrame2;
+
+    vortexCtx.fillStyle = 'rgba(4,1,15,0.25)';
+    vortexCtx.fillRect(0, 0, W, H);
+
+    var step = 28;
+    var cx = W / 2, cy = H / 2;
+
+    for (var gx = step; gx < W; gx += step) {
+      for (var gy = step; gy < H; gy += step) {
+        var nx = (gx - cx) / (W * 0.35);
+        var ny = (gy - cy) / (H * 0.35);
+        var v = vectorField(nx, ny, t, vortexType);
+        var len = Math.sqrt(v.vx * v.vx + v.vy * v.vy);
+        var scale = Math.min(step * 0.48 / (len + 0.001), step * 0.48);
+        var ex = gx + v.vx / (len + 0.001) * scale;
+        var ey = gy + v.vy / (len + 0.001) * scale;
+
+        var hue = vortexType === 'vortex' ? 185 : vortexType === 'saddle' ? 270 : 320;
+        var sat = 70 + len * 20;
+        var alpha = 0.5 + Math.min(0.45, len * 0.3);
+
+        vortexCtx.beginPath();
+        vortexCtx.moveTo(gx, gy);
+        vortexCtx.lineTo(ex, ey);
+        vortexCtx.strokeStyle = 'hsla(' + hue + ',' + sat + '%,65%,' + alpha + ')';
+        vortexCtx.lineWidth = 1.4;
+        vortexCtx.stroke();
+
+        // Arrowhead
+        var angle = Math.atan2(ey - gy, ex - gx);
+        vortexCtx.beginPath();
+        vortexCtx.moveTo(ex, ey);
+        vortexCtx.lineTo(ex - 6 * Math.cos(angle - 0.4), ey - 6 * Math.sin(angle - 0.4));
+        vortexCtx.lineTo(ex - 6 * Math.cos(angle + 0.4), ey - 6 * Math.sin(angle + 0.4));
+        vortexCtx.closePath();
+        vortexCtx.fillStyle = 'hsla(' + hue + ',' + sat + '%,70%,' + alpha + ')';
+        vortexCtx.fill();
+      }
+    }
+
+    // Node dot at centre
+    vortexCtx.beginPath();
+    vortexCtx.arc(cx, cy, 5 + 2 * Math.sin(t * 0.05), 0, Math.PI * 2);
+    vortexCtx.fillStyle = vortexType === 'vortex' ? '#00d4b4' : vortexType === 'saddle' ? '#a78bfa' : '#ec4899';
+    vortexCtx.shadowColor = vortexCtx.fillStyle;
+    vortexCtx.shadowBlur = 15;
+    vortexCtx.fill();
+    vortexCtx.shadowBlur = 0;
+
+    requestAnimationFrame(drawVortex);
+  }
+  drawVortex();
+
+  /* ================================================================
+     CHARTS
+     ================================================================ */
+  window.addEventListener('load', function() {
+    if (typeof Chart === 'undefined') return;
+
+    Chart.defaults.color = '#9d9cc0';
+    Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
+
+    /* ---- Consciousness Manifold Radar ---- */
+    var mCtx = document.getElementById('chartManifold');
+    if (mCtx) {
+      new Chart(mCtx, {
+        type: 'radar',
+        data: {
+          labels: ['Sensory Input', 'Memory Trace', 'Action Potential', 'Emotional Charge', 'Spatial Map', 'Temporal Anchor'],
+          datasets: [
+            {
+              label: 'Active Thought',
+              data: [85, 70, 90, 60, 75, 80],
+              backgroundColor: 'rgba(0,212,180,0.15)', borderColor: '#00d4b4', pointBackgroundColor: '#00d4b4', pointRadius: 4
+            },
+            {
+              label: 'Past Action-Star',
+              data: [40, 95, 55, 88, 62, 100],
+              backgroundColor: 'rgba(124,58,237,0.15)', borderColor: '#7c3aed', pointBackgroundColor: '#7c3aed', pointRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              beginAtZero: true, max: 100,
+              grid: { color: 'rgba(255,255,255,0.06)' },
+              angleLines: { color: 'rgba(255,255,255,0.08)' },
+              ticks: { display: false },
+              pointLabels: { font: { size: 10 } }
+            }
+          },
+          plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } } }
+        }
+      });
+    }
+
+    /* ---- Neural Frequency Bands ---- */
+    var bCtx = document.getElementById('chartBands');
+    if (bCtx) {
+      new Chart(bCtx, {
+        type: 'bar',
+        data: {
+          labels: ['δ 0.5–4 Hz', 'θ 4–8 Hz', 'α 8–13 Hz', 'β 13–30 Hz', 'γ 30–100 Hz', 'ULF <0.5 Hz'],
+          datasets: [{
+            label: 'Relative EM Emission Amplitude',
+            data: [0.65, 0.90, 1.0, 0.70, 0.55, 0.30],
+            backgroundColor: ['#4f46e5','#00d4b4','#7c3aed','#06b6d4','#ec4899','#84cc16'],
+            borderRadius: 6,
+            borderSkipped: false,
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { callback: function(v) { return (v*100).toFixed(0)+'%'; } } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    /* ---- Dissipation Timeline ---- */
+    var dCtx = document.getElementById('chartDissipation');
+    if (dCtx) {
+      var labels = Array.from({length:50}, function(_,i) { return i; });
+      var shell  = labels.map(function(i) { return Math.exp(-i*0.045) + 0.02*Math.sin(i*0.8); });
+      var nodes  = labels.map(function(i) {
+        return i > 8 ? 0.15 * Math.exp(-(i-10)*0.06) * Math.abs(Math.sin(i*0.6)) : 0;
+      });
+      new Chart(dCtx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            { label: 'Shell Amplitude', data: shell, borderColor: '#00d4b4', backgroundColor: 'rgba(0,212,180,0.07)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 2 },
+            { label: 'Dissipation Nodes', data: nodes, borderColor: '#ec4899', backgroundColor: 'rgba(236,72,153,0.07)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 2 }
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } } },
+          scales: {
+            y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { display: false }
+          }
+        }
+      });
+    }
+
+    /* ---- AI Pipeline Polar ---- */
+    var pCtx = document.getElementById('chartPipeline');
+    if (pCtx) {
+      new Chart(pCtx, {
+        type: 'polarArea',
+        data: {
+          labels: ['B Plate Read', 'FFT Analysis', 'Node Mapping', 'Frequency Delta', 'Resonance Bridge', 'Lock-On'],
+          datasets: [{
+            data: [90, 75, 80, 70, 65, 85],
+            backgroundColor: ['rgba(0,212,180,0.55)','rgba(124,58,237,0.55)','rgba(6,182,212,0.55)','rgba(79,70,229,0.55)','rgba(236,72,153,0.55)','rgba(245,158,11,0.55)']
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: { r: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { display: false } } },
+          plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 12, font: { size: 11 } } } }
+        }
+      });
+    }
+
+    /* ---- Specificity vs Scatter Tradeoff ---- */
+    var tCtx = document.getElementById('chartTradeoff');
+    if (tCtx) {
+      var x = Array.from({length:30}, function(_,i) { return i; });
+      var specificity = x.map(function(v) { return 1 - Math.exp(-v * 0.12); });
+      var scatter     = x.map(function(v) { return Math.exp(-v * 0.08); });
+      new Chart(tCtx, {
+        type: 'line',
+        data: {
+          labels: x.map(function(v) { return 'Δ'+v; }),
+          datasets: [
+            { label: 'Lock-on Specificity', data: specificity, borderColor: '#00d4b4', backgroundColor: 'rgba(0,212,180,0.08)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 2 },
+            { label: 'Signal Scatter', data: scatter, borderColor: '#ec4899', backgroundColor: 'rgba(236,72,153,0.08)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 2 }
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } } },
+          scales: {
+            y: { beginAtZero: true, max: 1, ticks: { callback: function(v) { return (v*100)+'%'; } }, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false }, ticks: { maxTicksLimit: 8 } }
+          }
+        }
+      });
+    }
+
+    /* ---- ULF Reach Doughnut ---- */
+    var rCtx = document.getElementById('chartReach');
+    if (rCtx) {
+      new Chart(rCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Local (0–10 m)', 'Room (10–100 m)', 'City (0.1–10 km)', 'Regional (10–100 km)', 'Global (>1000 km)'],
+          datasets: [{
+            data: [5, 12, 25, 30, 28],
+            backgroundColor: ['#00d4b4','#7c3aed','#06b6d4','#4f46e5','#ec4899'],
+            borderColor: 'rgba(0,0,0,0.3)',
+            borderWidth: 2,
+            hoverOffset: 8,
+          }]
+        },
+        options: {
+          responsive: true,
+          cutout: '65%',
+          plugins: {
+            legend: { position: 'right', labels: { boxWidth: 12, padding: 10, font: { size: 11 } } },
+            tooltip: { callbacks: { label: function(c) { return ' '+c.label+': '+c.raw+'%'; } } }
+          }
+        }
+      });
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>
